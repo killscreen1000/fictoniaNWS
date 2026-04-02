@@ -8,14 +8,14 @@
     "severity": "high"
   },
   {
-    "id": 2,
-    "type": "Flash Flood Warning",
-    "area": "Central Fictonia",
-    "issued": "2026-04-02 14:10",
-    "details": "Heavy rainfall causing rapid flooding.",
-    "severity": "moderate"
-  }
-  {
+  "id": 2,
+  "type": "Severe Thunderstorm Warning",
+  "area": "South Fictonia",
+  "issued": "2026-04-02 16:10",
+  "details": "60 mph winds and hail expected.",
+  "severity": "moderate"
+}
+   {
   "id": 3,
   "type": "Severe Thunderstorm Warning",
   "area": "South Fictonia",
