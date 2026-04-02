@@ -23,4 +23,12 @@
   "details": "60 mph winds and hail expected.",
   "severity": "moderate"
 }
+   {
+  "id": 4,
+  "type": "Severe Thunderstorm Warning",
+  "area": "South Fictonia",
+  "issued": "2026-04-02 16:10",
+  "details": "60 mph winds and hail expected.",
+  "severity": "moderate"
+}
 ]
