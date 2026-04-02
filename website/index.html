@@ -35,7 +35,7 @@
 
 <script>
 async function loadWarnings() {
-  const res = await fetch("warnings.json");
+  const res = await fetch("website/warnings.json");
   const data = await res.json();
 
   const feed = document.getElementById("feed");
@@ -52,7 +52,7 @@ async function loadWarnings() {
     `;
 
     div.onclick = () => {
-      window.location.href = "view.html?id=" + w.id;
+      window.location.href = "website/view.html?id=" + w.id;
     };
 
     feed.appendChild(div);
