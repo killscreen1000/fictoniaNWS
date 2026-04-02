@@ -35,7 +35,7 @@
 
 <script>
 async function loadWarnings() {
-  const res = await fetch("warnings.json");
+  const res = await fetch("website/warnings.json");
   const data = await res.json();
 
   const feed = document.getElementById("feed");
