@@ -5,51 +5,65 @@
   <style>
     body {
       font-family: Arial;
-      background: #111;
+      background: #0b0f14;
       color: white;
+      margin: 0;
+      padding: 20px;
     }
+
     .warning {
-      border: 1px solid #444;
-      padding: 10px;
-      margin: 10px;
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 8px;
       cursor: pointer;
+      transition: 0.2s;
     }
-    .high { border-left: 5px solid red; }
-    .medium { border-left: 5px solid orange; }
-    .low { border-left: 5px solid yellow; color: #ddd; }
+
+    .warning:hover {
+      opacity: 0.8;
+    }
+
+    .high { background: #b00020; }
+    .moderate { background: #e65100; }
+    .low { background: #1565c0; }
   </style>
 </head>
 <body>
 
-<h1>⚠ Fictonia Warning Feed</h1>
+<h1>Fictonia Warning Feed</h1>
 <div id="feed"></div>
 
 <script>
-fetch("warnings.json")
-  .then(res => res.json())
-  .then(data => {
-    data.reverse().forEach(warning => {
-      let div = document.createElement("div");
-      div.className = "warning " + warning.severity;
+async function loadWarnings() {
+  const res = await fetch("warnings.json");
+  const data = await res.json();
 
-      div.innerHTML = `
-        <b>${warning.type}</b><br>
-        ${warning.area}<br>
-        <small>${warning.issued}</small>
-      `;
+  const feed = document.getElementById("feed");
+  feed.innerHTML = "";
 
-      div.onclick = () => {
-        window.location = "view.html?id=" + warning.id;
-      };
+  data.slice().reverse().forEach(w => {
+    const div = document.createElement("div");
+    div.className = "warning " + w.severity;
 
-      document.getElementById("feed").appendChild(div);
-    });
+    div.innerHTML = `
+      <b>${w.type}</b><br>
+      ${w.area}<br>
+      <small>${w.issued}</small>
+    `;
+
+    div.onclick = () => {
+      window.location.href = "view.html?id=" + w.id;
+    };
+
+    feed.appendChild(div);
   });
+}
 
-// Auto refresh every 30 seconds
-setInterval(() => {
-  location.reload();
-}, 30000);
+// Load initially
+loadWarnings();
+
+// Auto-refresh every 30 seconds
+setInterval(loadWarnings, 30000);
 </script>
 
 </body>
