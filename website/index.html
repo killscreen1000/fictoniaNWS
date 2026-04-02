@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fictonia Warning Feed</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #111;
+      color: white;
+    }
+    .warning {
+      border: 1px solid #444;
+      padding: 10px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .high { border-left: 5px solid red; }
+    .medium { border-left: 5px solid orange; }
+    .low { border-left: 5px solid yellow; color: #ddd; }
+  </style>
+</head>
+<body>
+
+<h1>⚠ Fictonia Warning Feed</h1>
+<div id="feed"></div>
+
+<script>
+fetch("warnings.json")
+  .then(res => res.json())
+  .then(data => {
+    data.reverse().forEach(warning => {
+      let div = document.createElement("div");
+      div.className = "warning " + warning.severity;
+
+      div.innerHTML = `
+        <b>${warning.type}</b><br>
+        ${warning.area}<br>
+        <small>${warning.issued}</small>
+      `;
+
+      div.onclick = () => {
+        window.location = "view.html?id=" + warning.id;
+      };
+
+      document.getElementById("feed").appendChild(div);
+    });
+  });
+
+// Auto refresh every 30 seconds
+setInterval(() => {
+  location.reload();
+}, 30000);
+</script>
+
+</body>
+</html>
