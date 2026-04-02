@@ -3,8 +3,16 @@
     "id": 1,
     "type": "Tornado Warning",
     "area": "North Fictonia",
-    "issued": "2026-04-01 15:42",
-    "details": "Rotation detected. Seek shelter immediately.",
+    "issued": "2026-04-02 15:42",
+    "details": "Radar indicated rotation. Seek shelter immediately.",
     "severity": "high"
+  },
+  {
+    "id": 2,
+    "type": "Flash Flood Warning",
+    "area": "Central Fictonia",
+    "issued": "2026-04-02 14:10",
+    "details": "Heavy rainfall causing rapid flooding.",
+    "severity": "moderate"
   }
 ]
