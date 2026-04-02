@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>View Warning</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #111;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="content">Loading...</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const id = parseInt(params.get("id"));
+
+fetch("warnings.json")
+  .then(res => res.json())
+  .then(data => {
+    const warning = data.find(w => w.id === id);
+
+    if (!warning) {
+      document.getElementById("content").innerHTML = "Warning not found.";
+      return;
+    }
+
+    document.getElementById("content").innerHTML = `
+      <h1>${warning.type}</h1>
+      <h3>${warning.area}</h3>
+      <p><b>Issued:</b> ${warning.issued}</p>
+      <p>${warning.details}</p>
+      <br>
+      <a href="index.html">← Back to feed</a>
+    `;
+  });
+</script>
+
+</body>
+</html>
