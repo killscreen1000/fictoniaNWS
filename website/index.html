@@ -35,26 +35,28 @@
 
 <script>
 async function loadWarnings() {
-  try {
-    const res = await fetch("warnings.json");
-    const data = await res.json();
+  const res = await fetch("warnings.json");
+  const data = await res.json();
 
-    console.log("Loaded data:", data); // 👈 important
+  const feed = document.getElementById("feed");
+  feed.innerHTML = "";
 
-    const feed = document.getElementById("feed");
-    feed.innerHTML = "";
+  data.slice().reverse().forEach(w => {
+    const div = document.createElement("div");
+    div.className = "warning " + w.severity;
 
-    data.slice().reverse().forEach(w => {
-      const div = document.createElement("div");
-      div.className = "warning " + w.severity;
+    div.innerHTML = `
+      <b>${w.type}</b><br>
+      ${w.area}<br>
+      <small>${w.issued}</small>
+    `;
 
-      div.innerHTML = `<b>${w.type}</b>`;
-      feed.appendChild(div);
-    });
+    div.onclick = () => {
+      window.location.href = "view.html?id=" + w.id;
+    };
 
-  } catch (err) {
-    console.error("Error loading warnings:", err);
-  }
+    feed.appendChild(div);
+  });
 }
 
 // Load initially
