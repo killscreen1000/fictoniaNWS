@@ -26,7 +26,7 @@ function getID() {
 
 async function loadWarning() {
   const id = getID();
-  const res = await fetch("website/warnings.json");
+  const res = await fetch("warnings.json");
   const data = await res.json();
 
   const warning = data.find(w => w.id == id);
