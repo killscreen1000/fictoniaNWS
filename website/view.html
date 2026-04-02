@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>View Warning</title>
+  <title>Warning Details</title>
   <style>
     body {
       font-family: Arial;
-      background: #111;
+      background: #0b0f14;
       color: white;
       padding: 20px;
     }
@@ -13,31 +13,36 @@
 </head>
 <body>
 
-<div id="content">Loading...</div>
+<h1 id="type"></h1>
+<h3 id="area"></h3>
+<p><b>Issued:</b> <span id="issued"></span></p>
+<p id="details"></p>
 
 <script>
-const params = new URLSearchParams(window.location.search);
-const id = parseInt(params.get("id"));
+function getID() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("id");
+}
 
-fetch("warnings.json")
-  .then(res => res.json())
-  .then(data => {
-    const warning = data.find(w => w.id === id);
+async function loadWarning() {
+  const id = getID();
+  const res = await fetch("warnings.json");
+  const data = await res.json();
 
-    if (!warning) {
-      document.getElementById("content").innerHTML = "Warning not found.";
-      return;
-    }
+  const warning = data.find(w => w.id == id);
 
-    document.getElementById("content").innerHTML = `
-      <h1>${warning.type}</h1>
-      <h3>${warning.area}</h3>
-      <p><b>Issued:</b> ${warning.issued}</p>
-      <p>${warning.details}</p>
-      <br>
-      <a href="index.html">← Back to feed</a>
-    `;
-  });
+  if (!warning) {
+    document.body.innerHTML = "Warning not found.";
+    return;
+  }
+
+  document.getElementById("type").innerText = warning.type;
+  document.getElementById("area").innerText = warning.area;
+  document.getElementById("issued").innerText = warning.issued;
+  document.getElementById("details").innerText = warning.details;
+}
+
+loadWarning();
 </script>
 
 </body>
