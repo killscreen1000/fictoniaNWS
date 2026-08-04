@@ -959,5 +959,73 @@
     [39.85512333761959, -86.2046373926939],
     [39.896668635310625, -86.09474062117798]
   ]
+ },
+ {
+  "id": 54,
+  "date": "2026-05-19",
+  "dayname": "May 19, 2026",
+  "time": "5:40 PM EDT",
+  "rating": "EF0",
+  "length": 8.91,
+  "width": 25,
+  "maxWind": 85,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A brief tornado caused minor damage along the Indiana/New Freeport County line.",
+  "path": [
+    [34.906763572646646, -90.54571870559768],
+    [35.07723128523087, -90.347904516869]
+  ]
+ },
+ {
+  "id": 54,
+  "date": "2026-05-19",
+  "dayname": "May 19, 2026",
+  "time": "7:00 PM EDT",
+  "rating": "EF0",
+  "length": 1.22,
+  "width": 25,
+  "maxWind": 80,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A brief tornado caused tree damage in northwestern Covesville County.",
+  "path": [
+    [41.643908677445516, -82.62854224258206],
+    [41.65284736707661, -82.58550354896207]
+  ]
+ },
+ {
+  "id": 55,
+  "date": "2026-05-20",
+  "dayname": "May 20, 2026",
+  "time": "12:15 PM EDT",
+  "rating": "EF1",
+  "length": 7.34,
+  "width": 50,
+  "maxWind": 90,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A brief tornado caused minor damage in southwestern Delaware County.",
+  "path": [
+    [35.31935895982468, -86.88125610351562],
+    [35.41348439780011, -86.715087890625]
+  ]
+ },
+ {
+  "id": 56,
+  "date": "2026-05-24",
+  "dayname": "May 24, 2026",
+  "time": "1:10 PM EDT",
+  "rating": "EF1",
+  "length": 4.17,
+  "width": 50,
+  "maxWind": 90,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "A tornado caused minor damage in northeastern Wilmington County.",
+  "path": [
+    [33.797431647556586, -86.56069507277863],
+    [33.87574643031223, -86.4501589028851]
+  ]
  }
 ]
