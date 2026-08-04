@@ -857,5 +857,107 @@
     [38.63827604852019, -88.65660615085838],
     [38.57413538477598, -88.16442704611723]
   ]
+ },
+ {
+  "id": 48,
+  "date": "2026-04-27",
+  "dayname": "April 27, 2026",
+  "time": "9:20 PM EDT",
+  "rating": "EF1",
+  "length": 12.33,
+  "width": 50,
+  "maxWind": 90,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A tornado caused minor damage in southern Fairfax County. No fatalities or injuries were reported.",
+  "path": [
+    [37.103091381917004, -91.3028779680475],
+    [37.16091245368757, -90.97489359508468]
+  ]
+ },
+ {
+  "id": 49,
+  "date": "2026-04-28",
+  "dayname": "April 28, 2026",
+  "time": "3:40 PM EDT",
+  "rating": "EF0",
+  "length": 2.02,
+  "width": 25,
+  "maxWind": 80,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A tornado caused minor damage along the Pallet/Upton County border. No fatalities or injuries were reported.",
+  "path": [
+    [33.403685208135094, -87.83020019531251],
+    [33.433505305754736, -87.75054931640625]
+  ]
+ },
+ {
+  "id": 50,
+  "date": "2026-04-28",
+  "dayname": "April 28, 2026",
+  "time": "9:05 PM EDT",
+  "rating": "EF0",
+  "length": 2.48,
+  "width": 25,
+  "maxWind": 80,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A tornado caused minor damage north of Springfield. No fatalities or injuries were reported.",
+  "path": [
+    [33.54808952612181, -88.46191406250001],
+    [33.56068595626067, -88.39324951171876]
+  ]
+ },
+ {
+  "id": 51,
+  "date": "2026-04-28",
+  "dayname": "April 28, 2026",
+  "time": "9:15 PM EDT",
+  "rating": "EF1",
+  "length": 5.64,
+  "width": 50,
+  "maxWind": 90,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A tornado caused minor damage west of Staunton. No fatalities or injuries were reported.",
+  "path": [
+    [34.40399013663706, -88.9145718710034],
+    [34.41072178426509, -88.76779433393166]
+  ]
+ },
+ {
+  "id": 52,
+  "date": "2026-05-19",
+  "dayname": "May 19, 2026",
+  "time": "3:40 PM EDT",
+  "rating": "EF0",
+  "length": 0.72,
+  "width": 25,
+  "maxWind": 70,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A brief tornado crossed Interstate 85 in southern Westmoreland County.",
+  "path": [
+    [35.39344064607096, -85.78950511602808],
+    [35.399874053624885, -85.76268766480821]
+  ]
+ },
+ {
+  "id": 53,
+  "date": "2026-05-19",
+  "dayname": "May 19, 2026",
+  "time": "5:05 PM EDT",
+  "rating": "EF1",
+  "length": 4.17,
+  "width": 50,
+  "maxWind": 90,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A brief tornado caused minor damage in west central Albemarle County.",
+  "path": [
+    [39.85512333761959, -86.2046373926939],
+    [39.896668635310625, -86.09474062117798]
+  ]
  }
 ]
