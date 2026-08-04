@@ -619,7 +619,7 @@
  {
   "id": 34,
   "date": "2026-04-02",
-  "dayname": "Aoril 2, 2026",
+  "dayname": "April 2, 2026",
   "time": "7:55 PM EDT",
   "rating": "EF0",
   "length": 11.65,
@@ -636,7 +636,7 @@
  {
   "id": 35,
   "date": "2026-04-04",
-  "dayname": "Aoril 4, 2026",
+  "dayname": "April 4, 2026",
   "time": "3:15 PM EDT",
   "rating": "EF1",
   "length": 4.13,
@@ -648,6 +648,94 @@
   "path": [
     [34.69460076557313, -88.29705736929294],
     [34.75557429707735, -88.10933521075384]
+  ]
+ },
+ {
+  "id": 36,
+  "date": "2026-04-04",
+  "dayname": "April 4, 2026",
+  "time": "5:10 PM EDT",
+  "rating": "EF2",
+  "length": 13.51,
+  "width": 75,
+  "maxWind": 115,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "This tornado caused significant damage on Interstate 75 in Tamaqua County.",
+  "path": [
+    [34.14669898802833, -88.26946448503962],
+    [34.19422034608155, -87.89855655458425]
+  ]
+ },
+ {
+  "id": 37,
+  "date": "2026-04-17",
+  "dayname": "April 17, 2026",
+  "time": "6:50 PM EDT",
+  "rating": "EF1",
+  "length": 13.11,
+  "width": 100,
+  "maxWind": 100,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A tornado caused minor damage in eastern Albany County.",
+  "path": [
+    [40.03089528459014, -91.86220105258975],
+    [40.14562169695447, -91.49169050273171]
+  ]
+ },
+ {
+  "id": 38,
+  "date": "2026-04-17",
+  "dayname": "April 17, 2026",
+  "time": "9:15 PM EDT",
+  "rating": "EF1",
+  "length": 14.96,
+  "width": 75,
+  "maxWind": 100,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "A tornado passed south of Herkimer and caused some damage, and one injury.",
+  "path": [
+    [40.20428231529996, -89.9784255041542],
+    [40.27900416060874, -89.66411599275776],
+    [40.29330318989394, -89.61207799418221],
+    [40.35046905469715, -89.55795847566363]
+  ]
+ },
+ {
+  "id": 39,
+  "date": "2026-04-17",
+  "dayname": "April 17, 2026",
+  "time": "9:30 PM EDT",
+  "rating": "EF3",
+  "length": 29.86,
+  "width": 250,
+  "maxWind": 165,
+  "deaths": 1,
+  "injuries": 5,
+  "summary": "A strong tornado moved through northeastern Carbon, causing extreme amounts of damage, especially in Knox County, where one fatality and 5 injuries were reported. The tornado dissipated just southwest of Newport in Riverland.",
+  "path": [
+    [40.405763437743474, -89.83480062808563],
+    [40.611623147939454, -89.15830664660325],
+    [40.65587943144456, -89.01468177053471]
+  ]
+ },
+ {
+  "id": 40,
+  "date": "2026-04-17",
+  "dayname": "April 17, 2026",
+  "time": "10:10 PM EDT",
+  "rating": "EF1",
+  "length": 10.83,
+  "width": 100,
+  "maxWind": 95,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A tornado caused minor damage in southeastern Newport County.",
+  "path": [
+    [40.51352272235769, -89.00219265087655],
+    [40.62268996886852, -88.67331249987897]
   ]
  }
 ]
