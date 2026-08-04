@@ -791,19 +791,71 @@
  },
  {
   "id": 44,
-  "date": "2026-04-25",
-  "dayname": "April 25, 2026",
-  "time": "7:50 PM EDT",
+  "date": "2026-04-26",
+  "dayname": "April 26, 2026",
+  "time": "9:05 PM EDT",
   "rating": "EF1",
-  "length": 8.01,
-  "width": 50,
+  "length": 7.74,
+  "width": 75,
   "maxWind": 100,
   "deaths": 0,
-  "injuries": 4,
-  "summary": "A strong tornado caused damage especially along Interstate 32 in Wilmington County west of the town of Wilmington.",
+  "injuries": 0,
+  "summary": "A tornado caused minor damage in Jordan and Loons counties.",
   "path": [
-    [33.51386657611478, -86.86555111608895],
-    [33.32981285945766, -86.69641610724712]
+    [36.268490911601745, -96.9830854617694],
+    [36.378198938743566, -96.77337918512228]
+  ]
+ },
+ {
+  "id": 45,
+  "date": "2026-04-27",
+  "dayname": "April 27, 2026",
+  "time": "6:40 PM EDT",
+  "rating": "EF1",
+  "length": 10.61,
+  "width": 75,
+  "maxWind": 100,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "A tornado caused minor damage in Herkimer and Jasmine counties, causing one injury.",
+  "path": [
+    [40.01590130784233, -89.75967407226564],
+    [40.01800604299182, -89.48364257812501]
+  ]
+ },
+ {
+  "id": 46,
+  "date": "2026-04-27",
+  "dayname": "April 27, 2026",
+  "time": "9:10 PM EDT",
+  "rating": "EF2",
+  "length": 22.29,
+  "width": 100,
+  "maxWind": 130,
+  "deaths": 0,
+  "injuries": 3,
+  "summary": "A strong tornado caused significant damage and several injuries south of Montrosetown.",
+  "path": [
+    [36.72239773790743, -91.98316645937847],
+    [36.798406074505344, -91.34250354709883]
+  ]
+ },
+ {
+  "id": 47,
+  "date": "2026-04-27",
+  "dayname": "April 27, 2026",
+  "time": "9:15 PM EDT",
+  "rating": "EF3",
+  "length": 43.06,
+  "width": 150,
+  "maxWind": 160,
+  "deaths": 1,
+  "injuries": 6,
+  "summary": "A strong tornado formed in northeastern Cascadia, crossing into Fictonia. The tornado carved straight through Lackawanna, killing one person and injuring 5. One more injury occurred in Foster County when the tornado crossed Interstate 75. Damage occurred on Interstate 175 however nobody was injured.",
+  "path": [
+    [38.62471261266925, -89.36016987109736],
+    [38.63827604852019, -88.65660615085838],
+    [38.57413538477598, -88.16442704611723]
   ]
  }
 ]
