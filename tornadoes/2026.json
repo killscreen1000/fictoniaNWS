@@ -494,7 +494,7 @@
   ]
  },
  {
-  "id": 25,
+  "id": 26,
   "date": "2026-03-15",
   "dayname": "March 15, 2026",
   "time": "9:30 PM EDT",
@@ -512,7 +512,7 @@
   ]
  },
  {
-  "id": 25,
+  "id": 27,
   "date": "2026-03-15",
   "dayname": "March 15, 2026",
   "time": "10:05 PM EDT",
@@ -528,6 +528,75 @@
     [36.94653625483394, -87.75603142865494],
     [37.19624953975479, -86.60972356576573],
     [37.21376602548342, -86.57083701584473]
+  ]
+ },
+ {
+  "id": 28,
+  "date": "2026-03-15",
+  "dayname": "March 15, 2026",
+  "time": "11:20 PM EDT",
+  "rating": "EF1",
+  "length": 6,
+  "width": 50,
+  "maxWind": 90,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "A tornado moved through southwestern Tioga County causing one injury.",
+  "path": [
+    [37.779700855532596, -86.25874936597265],
+    [37.84305068257226, -86.1182467698186]
+  ]
+ },
+ {
+  "id": 29,
+  "date": "2026-03-15",
+  "dayname": "March 15, 2026",
+  "time": "11:55 PM EDT",
+  "rating": "EF1",
+  "length": 7.68,
+  "width": 75,
+  "maxWind": 95,
+  "deaths": 0,
+  "injuries": 4,
+  "summary": "A spinup tornado caused injuries when it crossed Interstate 85 in Autauga County.",
+  "path": [
+    [39.59490939541836, -85.4461263739592],
+    [39.63461756649604, -85.29746883040367],
+    [39.63688591682473, -85.2091574183905]
+  ]
+ },
+ {
+  "id": 30,
+  "date": "2026-03-16",
+  "dayname": "March 16, 2026",
+  "time": "12:05 AM EDT",
+  "rating": "EF1",
+  "length": 15.57,
+  "width": 75,
+  "maxWind": 100,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "A tornado caused 1 injury in Omega County.",
+  "path": [
+    [35.02135570780537, -87.26420844314808],
+    [35.10406816250007, -86.85733288286757]
+  ]
+ },
+ {
+  "id": 31,
+  "date": "2026-03-16",
+  "dayname": "March 16, 2026",
+  "time": "12:25 AM EDT",
+  "rating": "EF1",
+  "length": 15.57,
+  "width": 75,
+  "maxWind": 100,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A tornado caused minor damage east of Angel City in Winchester County, Florence.",
+  "path": [
+    [37.99573032795988, -85.38619046695354],
+    [38.09266065559609, -85.22346208723452]
   ]
  }
 ]
