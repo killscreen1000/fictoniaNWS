@@ -357,5 +357,69 @@
     [41.42967622033744, -87.81401315304838],
     [41.4480839662007, -87.6310778904413]
   ]
+ },
+ {
+  "id": 19,
+  "date": "2026-03-06",
+  "dayname": "March 6, 2026",
+  "time": "5:59 PM EST",
+  "rating": "EF3",
+  "length": 72.11,
+  "width": 500,
+  "maxWind": 160,
+  "deaths": 1,
+  "injuries": 4,
+  "summary": "A long-tracked tornado started in southwestern Mayako and moved northeast completely through Centre County and into Goldensaddle County, where it caused 4 injuries and 1 fatality.",
+  "path": [
+    [36.1741619792174, -95.01347116615923],
+    [36.37283923770538, -94.9012201694029],
+    [36.60726280321687, -94.6264595369239],
+    [36.88763327319097, -94.46826402125417],
+    [37.039072461774055, -94.37875866370422],
+    [37.190210197927286, -94.22056314803446],
+    [37.43867916283949, -94.00824811384616],
+    [37.51471166034372, -93.90625363663804]
+  ]
+ },
+ {
+  "id": 20,
+  "date": "2026-03-10",
+  "dayname": "March 10, 2026",
+  "time": "7:15 PM EDT",
+  "rating": "EF2",
+  "length": 50.36,
+  "width": 700,
+  "maxWind": 130,
+  "deaths": 3,
+  "injuries": 9,
+  "summary": "A long-tracked wedge tornado carved through eastern Riverland on the evening of March 10th. This tornado started southeast of Goldsboro and moved east, eventually curving northeast. Many homes were damaged, which resulted in 9 injuries and 3 fatalities.",
+  "path": [
+    [41.05213572548598, -88.03070068359375],
+    [41.05628052649468, -87.83294677734376],
+    [40.98993237651748, -87.60498046875],
+    [40.96088404424376, -87.52532958984376],
+    [40.95880867392683, -87.47039794921876],
+    [40.97762354184101, -87.43954822685025],
+    [41.03624502550311, -87.30001896321413],
+    [41.2056148291234, -86.98653113712261],
+    [41.318739054941005, -86.67485537939]
+  ]
+ },
+ {
+  "id": 21,
+  "date": "2026-03-15",
+  "dayname": "March 15, 2026",
+  "time": "5:15 PM EDT",
+  "rating": "EF1",
+  "length": 20.03,
+  "width": 50,
+  "maxWind": 90,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "A tornado moved through central Fairfax and Powhatan counties, causing 1 injury.",
+  "path": [
+    [37.297468694016814, -91.62490777908516],
+    [37.43320654320983, -91.06081587452601]
+  ]
  }
 ]
