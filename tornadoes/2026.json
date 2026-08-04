@@ -160,5 +160,111 @@
     [34.590314053807916, -88.45503580145477],
     [34.60878250823165, -88.3563737129637]
   ]
+ },
+ {
+  "id": 10,
+  "date": "2026-02-26",
+  "dayname": "February 26, 2026",
+  "time": "8:12 PM EST",
+  "rating": "EF3",
+  "length": 26.24,
+  "width": 250,
+  "maxWind": 160,
+  "deaths": 2,
+  "injuries": 13,
+  "summary": "A supercell located in southeastern Madawaska County, Fictonia, dropped a strong tornado within the city of Madawaska and moved southeast. The tornado caused many injuries and a few deaths in southeastern Madawaska as it eventually crossed into rural land. It crossed the Fictonia River into Deltaland and cause one injury on a highway in Northampton County. The tornado lifted in southeastern Northampton County.",
+  "path": [
+    [34.116324916836675, -86.7460926278122],
+    [34.087057196987026, -86.67691535506853],
+    [34.07729904109704, -86.57682908812026],
+    [34.05655922672556, -86.54739195078254],
+    [34.05045831527182, -86.50323624477593],
+    [34.02238846825098, -86.43847454263295],
+    [34.024829693219765, -86.41050926216212],
+    [34.02238846825098, -86.37224098362304],
+    [34.008960475810426, -86.31189485208074],
+    [33.99432315411003, -86.25449243427215],
+    [33.95768425315136, -86.20739301453177],
+    [33.94302427250832, -86.17795587719407]
+  ]
+ },
+ {
+  "id": 11,
+  "date": "2026-02-26",
+  "dayname": "February 26, 2026",
+  "time": "8:15 PM EST",
+  "rating": "EF4",
+  "length": 30.28,
+  "width": 300,
+  "maxWind": 190,
+  "deaths": 5,
+  "injuries": 24,
+  "summary": "A supercell producing hail in excess of 4 inches produced a violent tornado in Sparkle and Omega counties in Fictonia. The tornado started in southwestern Sparkle County and moved northeast. The town of Sparkle Springs was directly hit, where 4 deaths and 20 injuries occurred. The tornado later crossed into Omega County, passing through the north side of Omega, where a death and 4 injuries occurred.",
+  "path": [
+    [34.85618299469729, -87.63819058829827],
+    [34.928743703619794, -87.47033690528102],
+    [34.96132257192014, -87.37808144591273],
+    [35.02749134127371, -87.10387771945707],
+    [35.066327421879215, -86.90014691335213]
+  ]
+ },
+ {
+  "id": 12,
+  "date": "2026-02-26",
+  "dayname": "February 26, 2026",
+  "time": "8:27 PM EST",
+  "rating": "EF2",
+  "length": 12.36,
+  "width": 100,
+  "maxWind": 130,
+  "deaths": 1,
+  "injuries": 4,
+  "summary": "A supercell produced a tornado that caused significant damage in the town of Brant. One death and 4 injuries were reported in the area as the tornado passed through northeastern Brant.",
+  "path": [
+    [34.32499405870073, -87.21624853976307],
+    [34.311232508048995, -87.19335182038982],
+    [34.25358151591395, -87.05180846426428],
+    [34.22086636884956, -87.0080965454608],
+    [34.214838507942424, -86.9425286672556],
+    [34.19502964308381, -86.91963194788232]
+  ]
+ },
+ {
+  "id": 12,
+  "date": "2026-02-26",
+  "dayname": "February 26, 2026",
+  "time": "8:36 PM EST",
+  "rating": "EF3",
+  "length": 13.45,
+  "width": 200,
+  "maxWind": 140,
+  "deaths": 0,
+  "injuries": 2,
+  "summary": "A strong tornado moved through rural Downsville County, producing significant hail in the process. Thankfully, no fatalities were reported.",
+  "path": [
+    [34.87597054136276, -86.80304702242613],
+    [34.98596646236391, -86.47966011065711]
+  ]
+ }
+ },
+ {
+  "id": 13,
+  "date": "2026-02-26",
+  "dayname": "February 26, 2026",
+  "time": "11:00 PM EST",
+  "rating": "EF1",
+  "length": 14.44,
+  "width": 150,
+  "maxWind": 100,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "A tornado moved through rural Upton County late at night, causing some damage in the northwestern part of the county. Only one injury and 0 fatalities were reported.",
+  "path": [
+    [33.71500565417199, -87.87133196645621],
+    [33.67943658956268, -87.72955671156134],
+    [33.657602829368415, -87.65090057699638],
+    [33.64466168982025, -87.5304887166747],
+    [33.658411585982236, -87.49261724447675]
+  ]
  }
 ]
