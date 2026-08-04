@@ -492,5 +492,42 @@
     [36.589976717259454, -89.79978725432966],
     [36.638344175852694, -89.40642022618997]
   ]
+ },
+ {
+  "id": 25,
+  "date": "2026-03-15",
+  "dayname": "March 15, 2026",
+  "time": "9:30 PM EDT",
+  "rating": "EF2",
+  "length": 23.32,
+  "width": 100,
+  "maxWind": 125,
+  "deaths": 0,
+  "injuries": 4,
+  "summary": "A strong EF2 tornado formed in southwestern Plushie County and moved northeast. The tornado caused 4 injuries in the Soukoku area.",
+  "path": [
+    [36.812719470351155, -88.500838868872],
+    [36.96426124184024, -87.93275709611275],
+    [36.97642564426955, -87.86512831364142]
+  ]
+ },
+ {
+  "id": 25,
+  "date": "2026-03-15",
+  "dayname": "March 15, 2026",
+  "time": "10:05 PM EDT",
+  "rating": "EF4",
+  "length": 23.32,
+  "width": 300,
+  "maxWind": 170,
+  "deaths": 1,
+  "injuries": 15,
+  "summary": "A violent tornado formed south of Soukoku and moved northeast, causing significant damage to trees in rural Forest County. The tornado caused 15 injuries and 1 death as it crossed through Birmingham in Saturn County. The tornado dissipated in central Newnan County.",
+  "path": [
+    [36.9289579296247, -87.90650546965365],
+    [36.94653625483394, -87.75603142865494],
+    [37.19624953975479, -86.60972356576573],
+    [37.21376602548342, -86.57083701584473]
+  ]
  }
 ]
