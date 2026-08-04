@@ -112,7 +112,7 @@
   "maxWind": 140,
   "deaths": 0,
   "injuries": 2,
-  "summary": "An EF3 tornado moved southeast across northern Mesayami District, causing a few injuries along the roads in these areas."
+  "summary": "An EF3 tornado moved southeast across northern Mesayami District, causing a few injuries along the roads in these areas.",
   "path": [
     [-86.53856080958124, 32.235110009457046],
     [-86.1411594555219, 32.19773023254617],
@@ -135,7 +135,7 @@
   "maxWind": 130,
   "deaths": 0,
   "injuries": 5,
-  "summary": "An EF2 tornado moved southeast along the west side of Grantsburg. Multiple injuries were reported on the west side of town as houses were hit."
+  "summary": "An EF2 tornado moved southeast along the west side of Grantsburg. Multiple injuries were reported on the west side of town as houses were hit.",
   "path": [
     [-86.41845703125, 32.11603238129428],
     [-86.37039184570312, 32.074124745951174],
@@ -155,7 +155,7 @@
   "maxWind": 100,
   "deaths": 0,
   "injuries": 0,
-  "summary": "An EF1 tornado caused minor damage southwest of Ivytown in Breezy County."
+  "summary": "An EF1 tornado caused minor damage southwest of Ivytown in Breezy County.",
   "path": [
     [-88.45503580145477, 34.590314053807916],
     [-88.3563737129637, 34.60878250823165]
