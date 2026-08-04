@@ -1027,5 +1027,59 @@
     [33.797431647556586, -86.56069507277863],
     [33.87574643031223, -86.4501589028851]
   ]
+ },
+ {
+  "id": 57,
+  "date": "2026-06-08",
+  "dayname": "June 8, 2026",
+  "time": "2:25 AM EDT",
+  "rating": "EF1",
+  "length": 10.98,
+  "width": 50,
+  "maxWind": 95,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "A tornado caused minor damage across central Weekley County.",
+  "path": [
+    [40.24684539333885, -90.38679106679002],
+    [40.29331411959932, -90.39355394503717],
+    [40.338461434240706, -90.42398689714928],
+    [40.3861557678189, -90.46456416663207],
+    [40.43252867278907, -90.51866719260913]
+  ]
+ },
+ {
+  "id": 58,
+  "date": "2026-06-08",
+  "dayname": "June 8, 2026",
+  "time": "4:20 PM EDT",
+  "rating": "EF2",
+  "length": 9.71,
+  "width": 100,
+  "maxWind": 125,
+  "deaths": 0,
+  "injuries": 3,
+  "summary": "A strong tornado caused damage in Madawaska County. The tornado touched down northwest of Hitmaker and moved northeast. EF2 damage was observed in southwestern Madawaska, where 3 injuries also took place.",
+  "path": [
+    [33.92737897490875, -86.95632198992514],
+    [34.115757970893966, -86.81644623566018]
+  ]
+ },
+ {
+  "id": 59,
+  "date": "2026-06-08",
+  "dayname": "June 8, 2026",
+  "time": "10:00 PM EDT",
+  "rating": "EF2",
+  "length": 9.59,
+  "width": 50,
+  "maxWind": 125,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "A strong tornado caused damage along Interstate 75 in Sumeru County.",
+  "path": [
+    [36.78921641694586, -87.86865234375001],
+    [36.848617533877835, -87.62283325195312]
+  ]
  }
 ]
