@@ -245,6 +245,7 @@
     [34.87597054136276, -86.80304702242613],
     [34.98596646236391, -86.47966011065711]
   ]
+ }
  },
  {
   "id": 13,
@@ -264,6 +265,98 @@
     [33.657602829368415, -87.65090057699638],
     [33.64466168982025, -87.5304887166747],
     [33.658411585982236, -87.49261724447675]
+  ]
+ },
+ {
+  "id": 14,
+  "date": "2026-03-03",
+  "dayname": "March 3, 2026",
+  "time": "4:27 PM EST",
+  "rating": "EF1",
+  "length": 10.57,
+  "width": 100,
+  "maxWind": 90,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A photogenic tornado moved through rural Mackinaw County on March 3rd.",
+  "path": [
+    [40.21635050080814, -91.35550740866753],
+    [40.22970441842483, -91.01757734905506]
+  ]
+ },
+ {
+  "id": 15,
+  "date": "2026-03-04",
+  "dayname": "March 4, 2026",
+  "time": "3:49 PM EST",
+  "rating": "EF2",
+  "length": 14.93,
+  "width": 300,
+  "maxWind": 115,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "A strong tornado touched down in Clay County, Cascadia, and quickly moved into Fictonia where it caused some damage to structures and 1 injury.",
+  "path": [
+    [38.36834489594859, -89.20993901350582],
+    [38.51603757743985, -88.98886667371875],
+    [38.57191533596154, -88.97250415335816],
+    [38.589768712317856, -88.93023616431357]
+  ]
+ },
+ {
+  "id": 16,
+  "date": "2026-03-04",
+  "dayname": "March 4, 2026",
+  "time": "4:24 PM EST",
+  "rating": "EF0",
+  "length": 7.17,
+  "width": 100,
+  "maxWind": 80,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A tornado caused minor damage in Lackawanna County, following the EF2 in northwestern Fictonia earlier in the day.",
+  "path": [
+    [38.541532760474944, -88.67175471090941],
+    [38.57414318564764, -88.49598408009507]
+  ]
+ },
+ {
+  "id": 17,
+  "date": "2026-03-04",
+  "dayname": "March 4, 2026",
+  "time": "4:49 PM EST",
+  "rating": "EF3",
+  "length": 12.27,
+  "width": 400,
+  "maxWind": 140,
+  "deaths": 0,
+  "injuries": 2,
+  "summary": "A strong tornado moved through rural Soma County, Gondwanaland, causing damage to some homes and a few injuries. Thankfully, no fatalities were reported.",
+  "path": [
+    [36.238476373266785, -92.22061157226564],
+    [36.23736805879142, -92.13272094726564],
+    [36.22185000639637, -92.04895019531251],
+    [36.20411131901636, -91.99539184570312],
+    [36.20411131901636, -91.96517944335939],
+    [36.21187248955801, -91.93359375],
+    [36.21298116537548, -91.88140869140626]
+  ]
+ },
+ {
+  "id": 18,
+  "date": "2026-03-06",
+  "dayname": "March 6, 2026",
+  "time": "5:21 PM EST",
+  "rating": "EF0",
+  "length": 6.92,
+  "width": 75,
+  "maxWind": 80,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "A tornado caused minor damage as it crossed a highway in northeastern Goldsboro County. One injury was reported.",
+  "path": [
+    [41.42967622033744, -87.81401315304838],
+    [41.4480839662007, -87.6310778904413]
   ]
  }
 ]
