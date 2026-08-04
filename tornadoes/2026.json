@@ -1,0 +1,36 @@
+[
+ {
+  "id": 1,
+  "date": "2026-01-25",
+  "day-name": "January 25, 2026"
+  "time": "13:15 EST",
+  "rating": "EF4",
+  "length": 10.07,
+  "width": 600,
+  "maxWind": 180,
+  "deaths": 1,
+  "injuries": 0,
+  "summary": "Large wedge tornado damaged numerous homes near Gustavo and Rolling Stone in Columbia District. One man was killed as his car was thrown.",
+  "path": [
+    [30.564821, -86.804625],
+    [30.600131, -86.522253]
+  ]
+ }
+ {
+  "id": 2,
+  "date": "2026-01-25",
+  "day-name": "January 25, 2026"
+  "time": "14:25 EST",
+  "rating": "EF3",
+  "length": 8.09,
+  "width": 600,
+  "maxWind": 140,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "Strong tornado passed east of Rolling Stone.",
+  "path": [
+    [30.645222, -86.65736],
+    [30.47046, -86.521021]
+  ]
+ }
+]
