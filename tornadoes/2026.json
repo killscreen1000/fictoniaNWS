@@ -3,7 +3,7 @@
   "id": 1,
   "date": "2026-01-09",
   "dayname": "January 9, 2026",
-  "time": "22:30 EST",
+  "time": "10:30 PM EST",
   "rating": "EF0",
   "length": 5.45,
   "width": 50,
@@ -20,7 +20,7 @@
   "id": 2,
   "date": "2026-01-25",
   "dayname": "January 25, 2026",
-  "time": "13:15 EST",
+  "time": "1:15 PM EST",
   "rating": "EF4",
   "length": 10.07,
   "width": 600,
@@ -37,7 +37,7 @@
   "id": 3,
   "date": "2026-01-25",
   "dayname": "January 25, 2026",
-  "time": "14:25 EST",
+  "time": "2:25 PM EST",
   "rating": "EF3",
   "length": 8.09,
   "width": 600,
@@ -54,7 +54,7 @@
   "id": 4,
   "date": "2026-01-25",
   "dayname": "January 25, 2026",
-  "time": "14:25 EST",
+  "time": "2:25 PM EST",
   "rating": "EFU",
   "length": 6.33,
   "width": 50,
@@ -71,7 +71,7 @@
   "id": 5,
   "date": "2026-02-19",
   "dayname": "February 19, 2026",
-  "time": "16:00 EST",
+  "time": "4:00 PM EST",
   "rating": "EF2",
   "length": 13.14,
   "width": 150,
@@ -82,6 +82,83 @@
   "path": [
     [39.028953, -89.21503],
     [39.153622, -88.862545]
+  ]
+ },
+ {
+  "id": 6,
+  "date": "2026-02-19",
+  "dayname": "February 19, 2026",
+  "time": "8:00 PM EST",
+  "rating": "EF0",
+  "length": 7.34,
+  "width": 25,
+  "maxWind": 70,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "EF0 tornado caused an injury to a man when a tree fell through his home due to the tornado.",
+  "path": [
+    [39.375713, -86.45779],
+    [39.440373, -86.194776]
+  ]
+ },
+ {
+  "id": 7,
+  "date": "2026-02-21",
+  "dayname": "February 21, 2026",
+  "time": "11:40 AM EST",
+  "rating": "EF3",
+  "length": 27.91,
+  "width": 250,
+  "maxWind": 140,
+  "deaths": 0,
+  "injuries": 2,
+  "summary": "An EF3 tornado moved southeast across northern Mesayami District, causing a few injuries along the roads in these areas."
+  "path": [
+    [-86.53856080958124, 32.235110009457046],
+    [-86.1411594555219, 32.19773023254617],
+    [-86.08228518084645, 32.22265179130239],
+    [-85.98367077076506, 32.20396126243003],
+    [-85.9041904999532, 32.146619695558584],
+    [-85.86739407828102, 32.13913769953955],
+    [-85.82471022914133, 32.13913769953955],
+    [-85.78349823686851, 32.12043002395012]
+  ]
+ }
+ {
+  "id": 8,
+  "date": "2026-02-21",
+  "dayname": "February 21, 2026",
+  "time": "12:00 PM EST",
+  "rating": "EF2",
+  "length": 5.86,
+  "width": 100,
+  "maxWind": 130,
+  "deaths": 0,
+  "injuries": 5,
+  "summary": "An EF2 tornado moved southeast along the west side of Grantsburg. Multiple injuries were reported on the west side of town as houses were hit."
+  "path": [
+    [-86.41845703125, 32.11603238129428],
+    [-86.37039184570312, 32.074124745951174],
+    [-86.32095336914064, 32.06597380696873],
+    [-86.30447387695314, 32.020548136127125],
+    [-86.26052856445314, 32.00773169254734]
+  ]
+ },
+ {
+  "id": 9,
+  "date": "2026-02-26",
+  "dayname": "February 26, 2026",
+  "time": "6:30 PM EST",
+  "rating": "EF1",
+  "length": 4.13,
+  "width": 25,
+  "maxWind": 100,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "An EF1 tornado caused minor damage southwest of Ivytown in Breezy County."
+  "path": [
+    [-88.45503580145477, 34.590314053807916],
+    [-88.3563737129637, 34.60878250823165]
   ]
  }
 ]
