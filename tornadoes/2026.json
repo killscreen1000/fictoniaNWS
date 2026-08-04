@@ -230,7 +230,7 @@
   ]
  },
  {
-  "id": 12,
+  "id": 13,
   "date": "2026-02-26",
   "dayname": "February 26, 2026",
   "time": "8:36 PM EST",
@@ -247,7 +247,7 @@
   ]
  },
  {
-  "id": 13,
+  "id": 14,
   "date": "2026-02-26",
   "dayname": "February 26, 2026",
   "time": "11:00 PM EST",
@@ -267,7 +267,7 @@
   ]
  },
  {
-  "id": 14,
+  "id": 15,
   "date": "2026-03-03",
   "dayname": "March 3, 2026",
   "time": "4:27 PM EST",
@@ -284,7 +284,7 @@
   ]
  },
  {
-  "id": 15,
+  "id": 16,
   "date": "2026-03-04",
   "dayname": "March 4, 2026",
   "time": "3:49 PM EST",
@@ -303,7 +303,7 @@
   ]
  },
  {
-  "id": 16,
+  "id": 17,
   "date": "2026-03-04",
   "dayname": "March 4, 2026",
   "time": "4:24 PM EST",
@@ -320,7 +320,7 @@
   ]
  },
  {
-  "id": 17,
+  "id": 18,
   "date": "2026-03-04",
   "dayname": "March 4, 2026",
   "time": "4:49 PM EST",
@@ -342,7 +342,7 @@
   ]
  },
  {
-  "id": 18,
+  "id": 19,
   "date": "2026-03-06",
   "dayname": "March 6, 2026",
   "time": "5:21 PM EST",
@@ -359,7 +359,7 @@
   ]
  },
  {
-  "id": 19,
+  "id": 20,
   "date": "2026-03-06",
   "dayname": "March 6, 2026",
   "time": "5:59 PM EST",
@@ -382,7 +382,7 @@
   ]
  },
  {
-  "id": 20,
+  "id": 21,
   "date": "2026-03-10",
   "dayname": "March 10, 2026",
   "time": "7:15 PM EDT",
@@ -406,7 +406,7 @@
   ]
  },
  {
-  "id": 21,
+  "id": 22,
   "date": "2026-03-15",
   "dayname": "March 15, 2026",
   "time": "5:15 PM EDT",
@@ -423,7 +423,7 @@
   ]
  },
  {
-  "id": 22,
+  "id": 23,
   "date": "2026-03-15",
   "dayname": "March 15, 2026",
   "time": "6:15 PM EDT",
@@ -440,7 +440,7 @@
   ]
  },
  {
-  "id": 23,
+  "id": 24,
   "date": "2026-03-15",
   "dayname": "March 15, 2026",
   "time": "6:30 PM EDT",
@@ -460,7 +460,7 @@
   ]
  },
  {
-  "id": 24,
+  "id": 25,
   "date": "2026-03-15",
   "dayname": "March 15, 2026",
   "time": "6:35 PM EDT",
@@ -477,7 +477,7 @@
   ]
  },
  {
-  "id": 25,
+  "id": 26,
   "date": "2026-03-15",
   "dayname": "March 15, 2026",
   "time": "8:05 PM EDT",
@@ -494,7 +494,7 @@
   ]
  },
  {
-  "id": 26,
+  "id": 27,
   "date": "2026-03-15",
   "dayname": "March 15, 2026",
   "time": "9:30 PM EDT",
@@ -512,7 +512,7 @@
   ]
  },
  {
-  "id": 27,
+  "id": 28,
   "date": "2026-03-15",
   "dayname": "March 15, 2026",
   "time": "10:05 PM EDT",
@@ -531,7 +531,7 @@
   ]
  },
  {
-  "id": 28,
+  "id": 29,
   "date": "2026-03-15",
   "dayname": "March 15, 2026",
   "time": "11:20 PM EDT",
@@ -548,7 +548,7 @@
   ]
  },
  {
-  "id": 29,
+  "id": 30,
   "date": "2026-03-15",
   "dayname": "March 15, 2026",
   "time": "11:55 PM EDT",
@@ -566,7 +566,7 @@
   ]
  },
  {
-  "id": 30,
+  "id": 31,
   "date": "2026-03-16",
   "dayname": "March 16, 2026",
   "time": "12:05 AM EDT",
@@ -583,7 +583,7 @@
   ]
  },
  {
-  "id": 31,
+  "id": 32,
   "date": "2026-03-16",
   "dayname": "March 16, 2026",
   "time": "12:25 AM EDT",
@@ -597,6 +597,57 @@
   "path": [
     [37.99573032795988, -85.38619046695354],
     [38.09266065559609, -85.22346208723452]
+  ]
+ },
+ {
+  "id": 33,
+  "date": "2026-03-16",
+  "dayname": "March 16, 2026",
+  "time": "1:45 AM EDT",
+  "rating": "EF2",
+  "length": 14.54,
+  "width": 100,
+  "maxWind": 120,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "An EF2 tornado caused significant damage around the Florence/Iredale border early in the morning on March 16th.",
+  "path": [
+    [38.48935849146356, -84.16876483901673],
+    [38.63538718346996, -83.75198911646733]
+  ]
+ },
+ {
+  "id": 34,
+  "date": "2026-04-02",
+  "dayname": "Aoril 2, 2026",
+  "time": "7:55 PM EDT",
+  "rating": "EF0",
+  "length": 11.65,
+  "width": 50,
+  "maxWind": 70,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A weak tornado moved through rural Newcomb County, causing very minor damage to a few structures.",
+  "path": [
+    [41.18543265055715, -89.67926471846366],
+    [41.22362872130779, -89.34222000370629]
+  ]
+ },
+ {
+  "id": 35,
+  "date": "2026-04-04",
+  "dayname": "Aoril 4, 2026",
+  "time": "3:15 PM EDT",
+  "rating": "EF1",
+  "length": 4.13,
+  "width": 50,
+  "maxWind": 90,
+  "deaths": 0,
+  "injuries": 2,
+  "summary": "An EF1 tornado touched down directly in Stephens City, immediately causing damage and 2 injuries. The rest of the tornado moved through rural Diamond County.",
+  "path": [
+    [34.69460076557313, -88.29705736929294],
+    [34.75557429707735, -88.10933521075384]
   ]
  }
 ]
