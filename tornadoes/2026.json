@@ -421,5 +421,76 @@
     [37.297468694016814, -91.62490777908516],
     [37.43320654320983, -91.06081587452601]
   ]
+ },
+ {
+  "id": 22,
+  "date": "2026-03-15",
+  "dayname": "March 15, 2026",
+  "time": "6:15 PM EDT",
+  "rating": "EF0",
+  "length": 7.63,
+  "width": 50,
+  "maxWind": 70,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A weak tornado crossed through southeastern Darlington County. No injuries or fatalities were reported.",
+  "path": [
+    [38.62189634412327, -90.19751626911801],
+    [38.66862825318707, -89.99547064709947]
+  ]
+ },
+ {
+  "id": 23,
+  "date": "2026-03-15",
+  "dayname": "March 15, 2026",
+  "time": "6:30 PM EDT",
+  "rating": "EF1",
+  "length": 11.03,
+  "width": 100,
+  "maxWind": 90,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "A tornado caused one injury and some minor damage in Dubois and Martin counties in Cascadia.",
+  "path": [
+    [38.32991330914635, -89.90869994941718],
+    [38.35404701500103, -89.80234990597876],
+    [38.40932309315348, -89.70625046913683],
+    [38.453513537508854, -89.64602815538255],
+    [38.46254916013798, -89.61143235811944]
+  ]
+ },
+ {
+  "id": 24,
+  "date": "2026-03-15",
+  "dayname": "March 15, 2026",
+  "time": "6:35 PM EDT",
+  "rating": "EF1",
+  "length": 4.14,
+  "width": 50,
+  "maxWind": 105,
+  "deaths": 0,
+  "injuries": 3,
+  "summary": "A short lived but still strong EF1 tornado crossed a road in northeastern Ashtabula County, causing a few injuries.",
+  "path": [
+    [37.91770262174941, -90.25465792204818],
+    [37.950061358016995, -90.16368378850446]
+  ]
+ },
+ {
+  "id": 25,
+  "date": "2026-03-15",
+  "dayname": "March 15, 2026",
+  "time": "8:05 PM EDT",
+  "rating": "EF2",
+  "length": 15.07,
+  "width": 75,
+  "maxWind": 135,
+  "deaths": 0,
+  "injuries": 2,
+  "summary": "A strong EF2 tornado carved through northwestern Hermesprota County, causing some injuries and some significant damage especially near the lake on the western side of the county.",
+  "path": [
+    [36.589976717259454, -89.79978725432966],
+    [36.638344175852694, -89.40642022618997]
+  ]
  }
 ]
