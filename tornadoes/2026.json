@@ -688,6 +688,23 @@
   "id": 38,
   "date": "2026-04-17",
   "dayname": "April 17, 2026",
+  "time": "9:10 PM EDT",
+  "rating": "EF1",
+  "length": 7.96,
+  "width": 50,
+  "maxWind": 95,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A tornado caused minor damage in Berkeley, Carteret, and Sunvalley counties as it crossed a highway.",
+  "path": [
+    [38.50773297167356, -92.80627611286587],
+    [38.629283530532504, -92.53826261731118]
+  ]
+ },
+ {
+  "id": 39,
+  "date": "2026-04-17",
+  "dayname": "April 17, 2026",
   "time": "9:15 PM EDT",
   "rating": "EF1",
   "length": 14.96,
@@ -704,7 +721,7 @@
   ]
  },
  {
-  "id": 39,
+  "id": 40,
   "date": "2026-04-17",
   "dayname": "April 17, 2026",
   "time": "9:30 PM EDT",
@@ -722,7 +739,7 @@
   ]
  },
  {
-  "id": 40,
+  "id": 41,
   "date": "2026-04-17",
   "dayname": "April 17, 2026",
   "time": "10:10 PM EDT",
@@ -736,6 +753,57 @@
   "path": [
     [40.51352272235769, -89.00219265087655],
     [40.62268996886852, -88.67331249987897]
+  ]
+ },
+ {
+  "id": 42,
+  "date": "2026-04-23",
+  "dayname": "April 23, 2026",
+  "time": "8:20 PM EDT",
+  "rating": "EF2",
+  "length": 10.6,
+  "width": 75,
+  "maxWind": 125,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "A strong tornado caused damage along a road in Autumn and Montague counties.",
+  "path": [
+    [36.81284374600983, -97.42762327352024],
+    [36.80065324844121, -97.12836591108456]
+  ]
+ },
+ {
+  "id": 43,
+  "date": "2026-04-25",
+  "dayname": "April 25, 2026",
+  "time": "7:10 PM EDT",
+  "rating": "EF2",
+  "length": 9.42,
+  "width": 100,
+  "maxWind": 120,
+  "deaths": 0,
+  "injuries": 2,
+  "summary": "A strong tornado caused damage in central Bradford County.",
+  "path": [
+    [34.15253279672966, -85.88259414436905],
+    [33.96094548652441, -85.75247165015048]
+  ]
+ },
+ {
+  "id": 44,
+  "date": "2026-04-25",
+  "dayname": "April 25, 2026",
+  "time": "7:50 PM EDT",
+  "rating": "EF1",
+  "length": 8.01,
+  "width": 50,
+  "maxWind": 100,
+  "deaths": 0,
+  "injuries": 4,
+  "summary": "A strong tornado caused damage especially along Interstate 32 in Wilmington County west of the town of Wilmington.",
+  "path": [
+    [33.51386657611478, -86.86555111608895],
+    [33.32981285945766, -86.69641610724712]
   ]
  }
 ]
