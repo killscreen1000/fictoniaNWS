@@ -1,0 +1,234 @@
+[
+ {
+  "id": 0,
+  "date": "2025-07-07",
+  "dayname": "July 7, 2025",
+  "time": "7:45 PM EDT",
+  "rating": "EF1",
+  "length": 6.29,
+  "width": 75,
+  "maxWind": 95,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "A tornado caused minor damage in southern Lamp County. The tornado dissipated as it moved into Lampsburg.",
+  "path": [
+    [37.16988542311347, -88.31634521484376],
+    [37.20163247096098, -88.25592041015626],
+    [37.192875997622984, -88.22708129882814],
+    [37.19615979414962, -88.20098876953126],
+    [37.20163247096098, -88.14743041992189]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2025-07-10",
+  "dayname": "July 10, 2025",
+  "time": "2:10 PM EDT",
+  "rating": "EF0",
+  "length": 17.38,
+  "width": 50,
+  "maxWind": 80,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A weak tornado caused minor damage in southern Prospect County.",
+  "path": [
+    [40.68865691079613, -82.17156148552932],
+    [40.70205620846152, -81.63580558598268]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2025-07-11",
+  "dayname": "July 11, 2025",
+  "time": "6:10 PM EDT",
+  "rating": "EF1",
+  "length": 16.94,
+  "width": 100,
+  "maxWind": 90,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A tornado caused minor damage in Buchanan and Colonial counties. This tornado did get a tornado emergency, the first one in Riverland.",
+  "path": [
+    [41.96115024123823, -90.90087890625001],
+    [42.114233717647075, -90.44219970703126]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2025-07-20",
+  "dayname": "July 20, 2025",
+  "time": "Unknown",
+  "rating": "EF0",
+  "length": 1.24,
+  "width": 25,
+  "maxWind": 70,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A weak tornado caused minor damage along Interstate 85 in Union County.",
+  "path": [
+    [39.96350198945128, -85.50376608025059],
+    [39.954332810972325, -85.4595318673634]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2025-07-25",
+  "dayname": "July 25, 2025",
+  "time": "10:25 AM",
+  "rating": "EF0",
+  "length": 2.67,
+  "width": 25,
+  "maxWind": 70,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A weak tornado caused minor damage in northwestern Seneca County.",
+  "path": [
+    [39.841451375445295, -85.7775399924444],
+    [39.87634516241033, -85.71178643274719]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2025-08-18",
+  "dayname": "August 18, 2025",
+  "time": "12:25 PM EDT",
+  "rating": "EF0",
+  "length": 11.01,
+  "width": 25,
+  "maxWind": 70,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A weak tornado caused minor tree damage in eastern Aquashicola County.",
+  "path": [
+    [40.432691222074276, -87.577691757603],
+    [40.202493993689174, -87.36427251190447]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2025-12-28",
+  "dayname": "December 28, 2025",
+  "time": "5:05 PM EST",
+  "rating": "EF2",
+  "length": 15.9,
+  "width": 75,
+  "maxWind": 120,
+  "deaths": 0,
+  "injuries": 2,
+  "summary": "A strong tornado caused significant damage in Fluvanna County when the northern side of the city of Fluvanna was hit by the end of this tornado.",
+  "path": [
+    [37.70570163571771, -91.02772425358471],
+    [37.73831927840119, -90.94824398277285],
+    [37.76626582457881, -90.54789891497974]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2025-12-28",
+  "dayname": "December 28, 2025",
+  "time": "6:00 PM EST",
+  "rating": "EF0",
+  "length": 5.1,
+  "width": 25,
+  "maxWind": 80,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "A weak tornado caused one injury and some minor damage along Interstate 75 in Luzerne County, south of Corvallis.",
+  "path": [
+    [38.895284684021085, -89.05792236328126],
+    [38.946600321433664, -88.91647338867188]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2025-12-28",
+  "dayname": "December 28, 2025",
+  "time": "6:35 PM EST",
+  "rating": "EF4",
+  "length": 29.79,
+  "width": 400,
+  "maxWind": 190,
+  "deaths": 4,
+  "injuries": 24,
+  "summary": "A violent tornado caused extreme damage to Fort Ashland International Airport, causing 4 deaths and 24 injuries.",
+  "path": [
+    [38.42978313355193, -88.96680681184517],
+    [38.498276685452154, -88.86689385458008],
+    [38.52109341247142, -88.71702441868243],
+    [38.530869796366005, -88.67539401982201],
+    [38.540644852070415, -88.59213322210108],
+    [38.560190978492486, -88.54217674346853],
+    [38.57647535790171, -88.40479642722903],
+    [38.591128143782264, -88.18623683321165]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2025-12-28",
+  "dayname": "December 28, 2025",
+  "time": "6:45 PM EST",
+  "rating": "EF1",
+  "length": 7.2,
+  "width": 50,
+  "maxWind": 95,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A brief tornado caused minor damage in northwestern Paunnacussing County.",
+  "path": [
+    [37.44446723884751, -90.12683347655955],
+    [37.5083525893718, -89.9343788266287]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2025-12-28",
+  "dayname": "December 28, 2025",
+  "time": "6:55 PM EST",
+  "rating": "EF1",
+  "length": 9.57,
+  "width": 50,
+  "maxWind": 95,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A tornado caused minor damage along the Cascadia/Fictonia border.",
+  "path": [
+    [37.98082093355617, -89.14306640625001],
+    [38.07066284360192, -88.92883300781251]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2025-12-28",
+  "dayname": "December 28, 2025",
+  "time": "7:35 PM EST",
+  "rating": "EF4",
+  "length": 10.51,
+  "width": 150,
+  "maxWind": 170,
+  "deaths": 1,
+  "injuries": 11,
+  "summary": "A violent tornado caused extreme damage to the town of Hunterdon, causing one death and 11 injuries.",
+  "path": [
+    [39.09211139385777, -87.42609050031373],
+    [39.14581371019704, -87.35249765696939],
+    [39.22457910427404, -87.14349398187154]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2025-12-28",
+  "dayname": "December 28, 2025",
+  "time": "8:55 PM EST",
+  "rating": "EF1",
+  "length": 2.45,
+  "width": 50,
+  "maxWind": 90,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A brief tornado caused minor damage along Fictonia Route 26 in southwestern Lamp County.",
+  "path": [
+    [37.12169200934514, -88.47152709960938],
+    [37.1512688809273, -88.39874267578126]
+  ]
+ }
+]
