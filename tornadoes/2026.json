@@ -1200,5 +1200,240 @@
     [36.61199320699549, -90.96606195002845],
     [36.6157941135587, -90.59850511860316]
   ]
+ },
+ {
+  "id": 67,
+  "date": "2026-06-14",
+  "dayname": "June 14, 2026",
+  "time": "1:00 AM EDT",
+  "rating": "EF2",
+  "length": 7.52,
+  "width": 50,
+  "maxWind": 120,
+  "deaths": 0,
+  "injuries": 3,
+  "summary": "A strong tornado moved through central Morris County, causing damage to southwestern Morristown.",
+  "path": [
+    [36.911921681871085, -93.89739990234376],
+    [36.830575850503635, -93.70513916015626]
+  ]
+ },
+ {
+  "id": 68,
+  "date": "2026-06-21",
+  "dayname": "June 21, 2026",
+  "time": "5:10 PM EDT",
+  "rating": "EF4",
+  "length": 38.77,
+  "width": 250,
+  "maxWind": 180,
+  "deaths": 1,
+  "injuries": 19,
+  "summary": "A violent tornado moved across northwestern Fictonia. The tornado touched down in western Lackawanna County and progressed eastwards. The tornado crossed into Fort Ashland where it caused EF4 level damage. The tornado crossed into Fictonia Lake and dissipated after tearing through Fort Ashland.",
+  "path": [
+    [38.71260697668377, -89.06815020850634],
+    [38.71138491228584, -88.5894013089502],
+    [38.69831573907591, -88.35986160964359],
+    [38.678707500735065, -88.23194104805087],
+    [38.678707500735065, -88.11836671766478],
+    [38.693647598335616, -87.95338505878816]
+  ]
+ },
+ {
+  "id": 69,
+  "date": "2026-06-21",
+  "dayname": "June 21, 2026",
+  "time": "5:55 PM EDT",
+  "rating": "EF3",
+  "length": 38.77,
+  "width": 100,
+  "maxWind": 140,
+  "deaths": 0,
+  "injuries": 2,
+  "summary": "A strong tornado moved across rural northwestern Fictonia, only causing 2 injuries when it crossed Interstate 75.",
+  "path": [
+    [38.378758543982, -89.00996550810845],
+    [38.398553825787495, -88.95159811427698],
+    [38.42329030766781, -88.62663370537736],
+    [38.42823658785663, -88.19755448585941],
+    [38.39979085098632, -88.04926975558485],
+    [38.40968629052381, -87.88521005400446]
+  ]
+ },
+ {
+  "id": 70,
+  "date": "2026-06-21",
+  "dayname": "June 21, 2026",
+  "time": "8:10 PM EDT",
+  "rating": "EF2",
+  "length": 20.65,
+  "width": 100,
+  "maxWind": 125,
+  "deaths": 0,
+  "injuries": 3,
+  "summary": "A strong tornado moved mostly through rural northern Fictonia, only causing damage at the end of its life near the town of Bedport.",
+  "path": [
+    [38.173431058254174, -87.79213772330019],
+    [38.173431058254174, -87.46086332587826],
+    [38.18583878575143, -87.20215379646302]
+  ]
+ },
+ {
+  "id": 71,
+  "date": "2026-07-11",
+  "dayname": "July 11, 2026",
+  "time": "6:35 PM EDT",
+  "rating": "EF2",
+  "length": 7.68,
+  "width": 75,
+  "maxWind": 125,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "A strong tornado caused significant damage in southeastern Newnan County. One injury occurred when a tree crashed through a house.",
+  "path": [
+    [37.090656424464264, -86.59890694112357],
+    [37.093005935911656, -86.47674282117198],
+    [37.07890777461202, -86.37960026795749]
+  ]
+ },
+ {
+  "id": 72,
+  "date": "2026-07-11",
+  "dayname": "July 11, 2026",
+  "time": "6:40 PM EDT",
+  "rating": "EF1",
+  "length": 7.22,
+  "width": 75,
+  "maxWind": 90,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A tornado caused minor damage south of Igorburg.",
+  "path": [
+    [37.41800659827011, -86.76315307617189],
+    [37.41036675612335, -86.57363891601564]
+  ]
+ },
+ {
+  "id": 73,
+  "date": "2026-07-18",
+  "dayname": "July 18, 2026",
+  "time": "4:40 PM EDT",
+  "rating": "EF0",
+  "length": 6.55,
+  "width": 25,
+  "maxWind": 80,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A minor tornado caused rural damage in southeastern Seyounby-Sy County.",
+  "path": [
+    [41.12607810513629, -77.74763654852558],
+    [41.04877246498406, -77.58875214628023]
+  ]
+ },
+ {
+  "id": 74,
+  "date": "2026-07-21",
+  "dayname": "July 21, 2026",
+  "time": "1:40 PM EDT",
+  "rating": "EF1",
+  "length": 8.15,
+  "width": 50,
+  "maxWind": 90,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A tornado caused damage in Gates and Pasquotank counties.",
+  "path": [
+    [39.07298318608703, -81.10118138250297],
+    [38.99148559944676, -80.87028138640744]
+  ]
+ },
+ {
+  "id": 75,
+  "date": "2026-07-21",
+  "dayname": "July 21, 2026",
+  "time": "1:50 PM EDT",
+  "rating": "EF1",
+  "length": 8.54,
+  "width": 25,
+  "maxWind": 70,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A weak tornado caused minor damage in rural Diverse and Monroe counties.",
+  "path": [
+    [41.516369725295554, -75.34218182798452],
+    [41.59988735962913, -75.1681702367241]
+  ]
+ },
+ {
+  "id": 76,
+  "date": "2026-07-21",
+  "dayname": "July 21, 2026",
+  "time": "3:45 PM EDT",
+  "rating": "EF5",
+  "length": 36.27,
+  "width": 900,
+  "maxWind": 210,
+  "deaths": 23,
+  "injuries": 144,
+  "summary": "An extremely violent tornado caused EF5 damage as the town of Uniontown was completely destroyed. The tornado touched down in eastern Floyd County and moved southeast, moving into Uniontown, completely destroying the town. The tornado continued into Dare County and eventually Conneaut County, Aqualand, before dissipating.",
+  "path": [
+    [39.6684688611595, -81.37506995785283],
+    [39.649715413315825, -81.18927771329174],
+    [39.615156269011074, -81.10086623139713],
+    [39.578603546272355, -81.03423728852007],
+    [39.55587186221857, -80.93429387420446],
+    [39.529716238075565, -80.82368664846791],
+    [39.49754394294868, -80.75120391411149],
+    [39.494745647987685, -80.69321772662634],
+    [39.47095559306462, -80.66241256452487],
+    [39.472355233322986, -80.57362121493826],
+    [39.46255716024245, -80.5120108907353],
+    [39.440156384325554, -80.49207813878728],
+    [39.440156384325554, -80.45583677160906],
+    [39.45555769196906, -80.3906023106883]
+  ]
+ },
+ {
+  "id": 77,
+  "date": "2026-07-21",
+  "dayname": "July 21, 2026",
+  "time": "5:15 PM EDT",
+  "rating": "EF1",
+  "length": 11.86,
+  "width": 50,
+  "maxWind": 95,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "As the Uniontown tornado recycled, it produced an EF1 tornado in Kitsonville County.",
+  "path": [
+    [39.357615678413765, -80.38697817397045],
+    [39.333778775911426, -80.29093855094821],
+    [39.30432196691265, -80.27281786735911],
+    [39.291693823340545, -80.22570409002743],
+    [39.301515909644756, -80.17134203926011],
+    [39.28327379548959, -80.08073862131458]
+  ]
+ },
+ {
+  "id": 78,
+  "date": "2026-07-21",
+  "dayname": "July 21, 2026",
+  "time": "5:25 PM EDT",
+  "rating": "EF3",
+  "length": 34.08,
+  "width": 750,
+  "maxWind": 165,
+  "deaths": 1,
+  "injuries": 19,
+  "summary": "A strong tornado touched down south of Lawport City and moved southeast. It caused extreme amounts of damage across Green and Lawport counties in Fictonia, and Chiri County, Valencia.",
+  "path": [
+    [37.398043039714935, -86.24934552959232],
+    [37.30268101321631, -86.05215838826975],
+    [37.2587235650642, -85.88652118955876],
+    [37.19965461709283, -85.7129965051949],
+    [37.18456576934904, -85.66724908840807],
+    [37.154379029068025, -85.64358663144937],
+    [36.910258020375544, -85.57733175196496]
+  ]
  }
 ]
