@@ -1081,5 +1081,56 @@
     [36.78921641694586, -87.86865234375001],
     [36.848617533877835, -87.62283325195312]
   ]
+ },
+ {
+  "id": 60,
+  "date": "2026-06-11",
+  "dayname": "June 11, 2026",
+  "time": "6:10 PM EDT",
+  "rating": "EF1",
+  "length": 9.26,
+  "width": 50,
+  "maxWind": 90,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A tornado caused damage in Newcomb and Summers counties.",
+  "path": [
+    [40.947869295855625, -89.45416529165256],
+    [41.01975108345343, -89.18809392287721]
+  ]
+ },
+ {
+  "id": 61,
+  "date": "2026-06-11",
+  "dayname": "June 11, 2026",
+  "time": "6:50 PM EDT",
+  "rating": "EF1",
+  "length": 13.2,
+  "width": 50,
+  "maxWind": 90,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A tornado caused damage in Cambridge and Newport counties.",
+  "path": [
+    [40.843610102103085, -88.86764300427919],
+    [40.97725322113572, -88.5102916768729]
+  ]
+ },
+ {
+  "id": 61,
+  "date": "2026-06-11",
+  "dayname": "June 11, 2026",
+  "time": "9:20 PM EDT",
+  "rating": "EF1",
+  "length": 8.53,
+  "width": 50,
+  "maxWind": 90,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A tornado caused damage in southwestern Mourvern County.",
+  "path": [
+    [40.717058614985774, -87.19673106675623],
+    [40.78161740313603, -86.94485356486766]
+  ]
  }
 ]
