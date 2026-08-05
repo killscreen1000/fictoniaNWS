@@ -1117,7 +1117,7 @@
   ]
  },
  {
-  "id": 61,
+  "id": 62,
   "date": "2026-06-11",
   "dayname": "June 11, 2026",
   "time": "9:20 PM EDT",
@@ -1131,6 +1131,74 @@
   "path": [
     [40.717058614985774, -87.19673106675623],
     [40.78161740313603, -86.94485356486766]
+  ]
+ },
+ {
+  "id": 63,
+  "date": "2026-06-12",
+  "dayname": "June 12, 2026",
+  "time": "2:40 AM EDT",
+  "rating": "EF0",
+  "length": 3.75,
+  "width": 25,
+  "maxWind": 70,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A tornado caused minor damage in southwestern Lunenburg County.",
+  "path": [
+    [38.434703974697086, -85.41648371731738],
+    [38.41643517015436, -85.29218760343694]
+  ]
+ },
+ {
+  "id": 64,
+  "date": "2026-06-12",
+  "dayname": "June 12, 2026",
+  "time": "4:15 AM EDT",
+  "rating": "EF2",
+  "length": 4,
+  "width": 50,
+  "maxWind": 120,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A brief but strong tornado caused damage along a road between Fairfax and Loudoun counties.",
+  "path": [
+    [37.22152053231222, -90.96319779923236],
+    [37.206044517913185, -90.79229064264678]
+  ]
+ },
+ {
+  "id": 65,
+  "date": "2026-06-12",
+  "dayname": "June 12, 2026",
+  "time": "4:45 AM EDT",
+  "rating": "EF0",
+  "length": 1.21,
+  "width": 25,
+  "maxWind": 65,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A brief but strong tornado caused damage along a road between Fairfax and Loudoun counties.",
+  "path": [
+    [37.205498633995575, -90.03478410302141],
+    [37.20454586295167, -90.0072871598753]
+  ]
+ },
+ {
+  "id": 66,
+  "date": "2026-06-12",
+  "dayname": "June 12, 2026",
+  "time": "6:00 AM EDT",
+  "rating": "EF1",
+  "length": 12.23,
+  "width": 50,
+  "maxWind": 95,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A tornado caused minor damage through rural Chincoteague County.",
+  "path": [
+    [36.61199320699549, -90.96606195002845],
+    [36.6157941135587, -90.59850511860316]
   ]
  }
 ]
