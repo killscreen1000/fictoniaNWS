@@ -1,6 +1,45 @@
 [
  {
-  "id": 0,
+  "id": 1,
+  "date": "2025-05-26",
+  "dayname": "May 26, 2025",
+  "time": "3:05 PM EDT",
+  "rating": "EF4",
+  "length": 5.68,
+  "width": 75,
+  "maxWind": 195,
+  "deaths": 6,
+  "injuries": 34,
+  "summary": "A violent tornado caused extreme damage and devastation within the community of Burnsover. 6 fatalities and 34 injuries were attributed to this tornado.",
+  "path": [
+    [31.815720360990618, -85.09489849086071],
+    [31.839096802414144, -85.07098810551626],
+    [31.86136580406718, -85.07696641832148],
+    [31.887896182451172, -85.099342757709],
+    [31.893643424128243, -85.12275985706799],
+    [31.895411734014615, -85.16647177587146]
+  ]
+ },
+ {
+  "id": 2,
+  "date": "2025-07-07",
+  "dayname": "July 7, 2025",
+  "time": "1:00 PM EDT",
+  "rating": "EF1",
+  "length": 2.82,
+  "width": 50,
+  "maxWind": 90,
+  "deaths": 0,
+  "injuries": 2,
+  "summary": "A tornado caused minor damage to the town of Surville in Jefferson District.",
+  "path": [
+    [30.595930137003787, -85.62748140897853],
+    [30.5807165740124, -85.5774382755044],
+    [30.5807165740124, -85.52739514203027]
+  ]
+ },
+ {
+  "id": 3,
   "date": "2025-07-07",
   "dayname": "July 7, 2025",
   "time": "7:45 PM EDT",
@@ -20,7 +59,46 @@
   ]
  },
  {
-  "id": 0,
+  "id": 4,
+  "date": "2025-07-07",
+  "dayname": "July 7, 2025",
+  "time": "8:20 PM EDT",
+  "rating": "EF0",
+  "length": 5.8,
+  "width": 75,
+  "maxWind": 85,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A weak tornado caused minor damage south of Loaf City.",
+  "path": [
+    [37.46963518528389, -85.69504916300609],
+    [37.49906142043672, -85.62212248770557],
+    [37.49811236795702, -85.58506139042166],
+    [37.51044910932941, -85.55278237020669],
+    [37.50950020160031, -85.52169886925894]
+  ]
+ },
+ {
+  "id": 5,
+  "date": "2025-07-10",
+  "dayname": "July 10, 2025",
+  "time": "1:45 PM EDT",
+  "rating": "EF3",
+  "length": 11.41,
+  "width": 150,
+  "maxWind": 160,
+  "deaths": 0,
+  "injuries": 3,
+  "summary": "A strong tornado caused significant damage to Knoxburg and Calhoun City.",
+  "path": [
+    [34.670234208161595, -84.20333862304689],
+    [34.70300126795406, -84.12918090820314],
+    [34.722203513768804, -84.01657104492189],
+    [34.74253044349609, -83.93966674804689]
+  ]
+ },
+ {
+  "id": 6,
   "date": "2025-07-10",
   "dayname": "July 10, 2025",
   "time": "2:10 PM EDT",
@@ -37,7 +115,7 @@
   ]
  },
  {
-  "id": 0,
+  "id": 7,
   "date": "2025-07-11",
   "dayname": "July 11, 2025",
   "time": "6:10 PM EDT",
@@ -54,7 +132,7 @@
   ]
  },
  {
-  "id": 0,
+  "id": 8,
   "date": "2025-07-20",
   "dayname": "July 20, 2025",
   "time": "Unknown",
@@ -71,7 +149,7 @@
   ]
  },
  {
-  "id": 0,
+  "id": 9,
   "date": "2025-07-25",
   "dayname": "July 25, 2025",
   "time": "10:25 AM",
@@ -88,7 +166,7 @@
   ]
  },
  {
-  "id": 0,
+  "id": 10,
   "date": "2025-08-18",
   "dayname": "August 18, 2025",
   "time": "12:25 PM EDT",
@@ -105,7 +183,7 @@
   ]
  },
  {
-  "id": 0,
+  "id": 11,
   "date": "2025-12-28",
   "dayname": "December 28, 2025",
   "time": "5:05 PM EST",
@@ -123,7 +201,7 @@
   ]
  },
  {
-  "id": 0,
+  "id": 12,
   "date": "2025-12-28",
   "dayname": "December 28, 2025",
   "time": "6:00 PM EST",
@@ -140,7 +218,7 @@
   ]
  },
  {
-  "id": 0,
+  "id": 13,
   "date": "2025-12-28",
   "dayname": "December 28, 2025",
   "time": "6:35 PM EST",
@@ -163,7 +241,7 @@
   ]
  },
  {
-  "id": 0,
+  "id": 14,
   "date": "2025-12-28",
   "dayname": "December 28, 2025",
   "time": "6:45 PM EST",
@@ -180,7 +258,7 @@
   ]
  },
  {
-  "id": 0,
+  "id": 15,
   "date": "2025-12-28",
   "dayname": "December 28, 2025",
   "time": "6:55 PM EST",
@@ -197,7 +275,7 @@
   ]
  },
  {
-  "id": 0,
+  "id": 16,
   "date": "2025-12-28",
   "dayname": "December 28, 2025",
   "time": "7:35 PM EST",
@@ -215,7 +293,7 @@
   ]
  },
  {
-  "id": 0,
+  "id": 17,
   "date": "2025-12-28",
   "dayname": "December 28, 2025",
   "time": "8:55 PM EST",
