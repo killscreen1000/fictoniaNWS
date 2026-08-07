@@ -1435,5 +1435,22 @@
     [37.154379029068025, -85.64358663144937],
     [36.910258020375544, -85.57733175196496]
   ]
+ },
+ {
+  "id": 79,
+  "date": "2026-08-06",
+  "dayname": "August 6, 2026",
+  "time": "12:50 AM EDT",
+  "rating": "EF2",
+  "length": 18.86,
+  "width": 100,
+  "maxWind": 120,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A strong tornado formed in northwestern Jax County and continued east, causing minor damage. IT dissipated in southwestern Glitch County.",
+  "path": [
+    [38.10932465412096, -95.79623717266006],
+    [38.10932465412096, -95.21842945296207]
+  ]
  }
 ]
