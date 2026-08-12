@@ -1447,10 +1447,27 @@
   "maxWind": 120,
   "deaths": 0,
   "injuries": 0,
-  "summary": "A strong tornado formed in northwestern Jax County and continued east, causing minor damage. IT dissipated in southwestern Glitch County.",
+  "summary": "A strong tornado formed in northwestern Jax County and continued east, causing minor damage. It dissipated in southwestern Glitch County.",
   "path": [
     [38.10932465412096, -95.79623717266006],
     [38.10932465412096, -95.21842945296207]
+  ]
+ },
+ {
+  "id": 80,
+  "date": "2026-08-11",
+  "dayname": "August 11, 2026",
+  "time": "4:05 PM EDT",
+  "rating": "EF1",
+  "length": 18.97,
+  "width": 25,
+  "maxWind": 90,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "A QLCS tornado spun up along the Florence/Iredale border, causing minor damage across northwestern and central Jefferson County.",
+  "path": [
+    [39.15290164314213, -83.92411475911645],
+    [38.917497405336555, -83.54078295638537]
   ]
  }
 ]
