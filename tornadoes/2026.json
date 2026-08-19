@@ -1469,5 +1469,59 @@
     [39.15290164314213, -83.92411475911645],
     [38.917497405336555, -83.54078295638537]
   ]
+ },
+ {
+  "id": 81,
+  "date": "2026-08-19",
+  "dayname": "August 19, 2026",
+  "time": "12:59 PM EDT",
+  "rating": "EF0",
+  "length": Unknown,
+  "width": 25,
+  "maxWind": 70,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A QLCS tornado spun up and caused minor damage in northwestern Circus County.",
+  "path": [
+    [41.378485, -98.217731],
+    [41.368627, -98.22362],
+    [41.361827, -98.213654],
+    [41.365567, -98.200969]
+  ]
+ },
+ {
+  "id": 82,
+  "date": "2026-08-19",
+  "dayname": "August 19, 2026",
+  "time": "1:00 PM EDT",
+  "rating": "EF0",
+  "length": Unknown,
+  "width": 15,
+  "maxWind": 70,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A QLCS tornado spun up and caused minor damage in northwestern Circus County.",
+  "path": [
+    [41.308761, -98.177261],
+    [41.30515, -98.164558],
+    [41.296123, -98.145332]
+  ]
+ },
+ {
+  "id": 83,
+  "date": "2026-08-19",
+  "dayname": "August 19, 2026",
+  "time": "1:05 PM EDT",
+  "rating": "EF0",
+  "length": Unknown,
+  "width": 15,
+  "maxWind": 70,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A QLCS tornado spun up and caused minor damage in northwestern Circus County.",
+  "path": [
+    [41.253213, -98.132316],
+    [41.239706, -98.11508]
+  ]
  }
 ]
