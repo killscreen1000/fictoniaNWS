@@ -120,6 +120,29 @@
  },
  {
   "id": 0,
+  "date": "2024-03-05",
+  "dayname": "March 5, 2024",
+  "time": "Unknown",
+  "rating": "EF5",
+  "length": 35.01,
+  "width": 100,
+  "maxWind": 205,
+  "deaths": 37,
+  "injuries": 85,
+  "summary": "This long-tracked, EF5 wedge tornado developed southwest of Lawport City, and intensified quickly, causing EF5 damage as soon as it entered Lawport City, Fictonia. The tornado then continued northeast over mainly rural areas before crossing the Fictonia Lake into Allegheny County, Florence. The tornado continued through much of Allegheny County before dissipating in the northeastern part of the county. The tornado killed 37 and injured 85.",
+  "path": [
+    [37.40176802823, -86.30368177762156],
+    [37.53287641354947, -86.13190110419784],
+    [37.55057612265941, -85.98019869130417],
+    [37.57534865550034, -85.8664218816339],
+    [37.59834434513017, -85.78833975735039],
+    [37.65845332345792, -85.67010111200678],
+    [37.748525608562055, -85.57863348070326],
+    [37.85787776935349, -85.51393686343975]
+  ]
+ },
+ {
+  "id": 0,
   "date": "2024-05-01",
   "dayname": "May 1, 2024",
   "time": "Unknown",
@@ -309,6 +332,53 @@
     [40.434354823705945, -84.27922390015803],
     [40.108585036266824, -83.65060487736521],
     [40.03373327012279, -83.30715408676643]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2024-11-10",
+  "dayname": "November 10, 2024",
+  "time": "Unknown",
+  "rating": "EF5",
+  "length": 80.78,
+  "width": 600,
+  "maxWind": 260,
+  "deaths": 144,
+  "injuries": 893,
+  "summary": "An extremely violent tornado caused total destruction across northern Grandlandia. The tornado touched down in southeastern Westhampton County and moved east, directly into Lenapehanna, then downtown Mountainview, and then Albany. This tornado was one of the most violent ever seen.",
+  "path": [
+    [39.83816653093238, -93.97087868525149],
+    [39.91569161980326, -93.46607960346567],
+    [39.92053402781717, -93.37458476989201],
+    [39.9181128666121, -93.2862449305795],
+    [39.88420762193793, -93.01491542411962],
+    [39.833318303371186, -92.89502564219548],
+    [39.833318303371186, -92.77513586027136],
+    [39.901162341344076, -92.62054114147445],
+    [39.908427365767174, -92.47541140546105],
+    [39.908427365767174, -92.35552162353689],
+    [39.886629981477256, -92.23878683587394],
+    [39.910848869379485, -92.07472713429354],
+    [39.95442129556931, -91.95483735236942],
+    [40.11636367742682, -91.77184768522207]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2024-11-10",
+  "dayname": "November 10, 2024",
+  "time": "Unknown",
+  "rating": "EF1",
+  "length": 44.6,
+  "width": 10,
+  "maxWind": 100,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "An EF1 tornado caused minor damage in southwestern Grandlandia.",
+  "path": [
+    [38.52570539765359, -94.45548560287283],
+    [38.6293586089007, -94.09581625710045],
+    [38.698377626904836, -93.21241786397529]
   ]
  }
 ]
