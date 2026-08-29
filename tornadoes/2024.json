@@ -10,12 +10,50 @@
   "maxWind": 150,
   "deaths": 1,
   "injuries": 19,
-  "summary": "An intense tornado caused significant damage in east central Florence. The tornado started in Rappahannock County north of Waffleburg and moved southeast. The tornado crossed the Rappahannock River into Richmond County, causing EF3 level damage in Henrico City. The tornado continued southeast into Halifax County, where it dissipated.",
+  "summary": "This tornado occurred with many other tornadoes on January 13, 2024. This tornado started in western Rappahannock County, and quickly moved southeast. The tornado then crossed the Rappahannock River and tore through the northeastern parts of Henrico City. The tornado then continued southeast and dissipated in Halifax County. The tornado was embedded in a squall line, and was fast-moving, so it was hard to track.",
   "path": [
     [39.27491211722775, -84.8138611747889],
     [39.22576925192491, -84.63265433889782],
     [39.12034718156571, -84.46231991316026],
     [38.87233655854255, -84.25755618860333]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2024-01-13",
+  "dayname": "January 13, 2024",
+  "time": "Unknown",
+  "rating": "EF0",
+  "length": 14.76,
+  "width": 25,
+  "maxWind": 70,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "This tornado occurred with many other tornadoes on January 13, 2024. This was a relatively quick moving tornado which only caused damage on the road in between George City and Martinsville. This tornado was not warned, due to it being embedded in a squall line and unable to be detected quick enough.",
+  "path": [
+    [39.00374604505769, -85.46982992071449],
+    [38.95864347517313, -85.23063689733829],
+    [38.8725871361552, -85.04580592472944]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2024-01-13",
+  "dayname": "January 13, 2024",
+  "time": "Unknown",
+  "rating": "EF2",
+  "length": 27.07,
+  "width": 25,
+  "maxWind": 130,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "This was one of 4 tornadoes that happened on January 13, 2024. This was the second strongest tornado of the day, and achieved this when it passed over a road in SE Montgomery County.",
+  "path": [
+    [38.48073577162944, -84.6023445527653],
+    [38.24812697460209, -84.37519589199314],
+    [38.19549900026224, -84.31063785156319],
+    [38.16352773090874, -84.2412977340643],
+    [38.099543116398756, -84.0380594586366]
   ]
  },
  {
@@ -69,7 +107,7 @@
   "maxWind": 180,
   "deaths": 3,
   "injuries": 5,
-  "summary": "A strong mountaintop tornado caused EF4 damage throughout northern Florence. The tornado started in central Autauga County and moved east, crossing Interstate 85 and into Tunkhannock County. The tornado then crossed the Rappahannock River, through rural parts of New James City and Spotsylvania, causing 3 deaths and 5 injuries. The tornado continued east and dissipated in western Pittsylvania County.",
+  "summary": "This high-end EF4 wedge tornado, almost classified as EF5, developed in rural Autauga County, Florence, before traveling east and entering Tunkhannock County and rapidly intensifying. The tornado entered northern Spotsylvania, and caused EF4+ damage in northern Spotsylvania before crossing into Susquehanna County and causing EF4 damage in James City. The tornado then rapidly weakened and lifted in Pittsylvania County. The tornado killed 3 and injured 5.",
   "path": [
     [39.49328104472723, -85.56944426631206],
     [39.52859635515204, -85.28076229141581],
@@ -140,6 +178,32 @@
     [39.60072642426475, -80.17130800343071],
     [39.602995885586814, -80.063862452148],
     [39.60639993812401, -79.94317018906332]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2024-05-14",
+  "dayname": "May 14, 2024",
+  "time": "Unknown",
+  "rating": "EF4",
+  "length": 44.45,
+  "width": 400,
+  "maxWind": 190,
+  "deaths": 1,
+  "injuries": 5,
+  "summary": "The first tornado of the day touched down 2 miles southwest of the town of Windom, in Winchester County, Florence. Unfortunately for the residents of the town, it was moving directly towards them. At 5:30pm, the tornado went straight through the town at EF4 intensity, causing significant damage, and killing one person. The tornado continued northeast through rural areas of Cambria, Montgomery, Rockingham, and Halifax counties before dissipating.",
+  "path": [
+    [38.09766036692719, -84.99208383387963],
+    [38.14471454944266, -84.85579463741634],
+    [38.19361872570517, -84.76493517310749],
+    [38.31761267610927, -84.61908182250643],
+    [38.39828273887441, -84.52583131966313],
+    [38.46762454385831, -84.47801054897424],
+    [38.54438495557038, -84.44931808656092],
+    [38.59301988627629, -84.40388835440649],
+    [38.673382317528485, -84.31781096716651],
+    [38.7461912445908, -84.22216942578876],
+    [38.792824624511375, -84.18391280923767]
   ]
  },
  {
