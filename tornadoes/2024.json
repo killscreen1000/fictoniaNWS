@@ -1,6 +1,87 @@
 [
  {
   "id": 0,
+  "date": "2024-01-13",
+  "dayname": "January 13, 2024",
+  "time": "Unknown",
+  "rating": "EF3",
+  "length": 26.33,
+  "width": 150,
+  "maxWind": 150,
+  "deaths": 1,
+  "injuries": 19,
+  "summary": "An intense tornado caused significant damage in east central Florence. The tornado started in Rappahannock County north of Waffleburg and moved southeast. The tornado crossed the Rappahannock River into Richmond County, causing EF3 level damage in Henrico City. The tornado continued southeast into Halifax County, where it dissipated.",
+  "path": [
+    [39.27491211722775, -84.8138611747889],
+    [39.22576925192491, -84.63265433889782],
+    [39.12034718156571, -84.46231991316026],
+    [38.87233655854255, -84.25755618860333]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2024-01-30",
+  "dayname": "January 30, 2024",
+  "time": "Unknown",
+  "rating": "EF0",
+  "length": 12.62,
+  "width": 25,
+  "maxWind": 70,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A brief tornado caused minor damage in Lake and Syracuse counties.",
+  "path": [
+    [39.333816276118654, -87.09686279296875],
+    [39.42728251263158, -87.10510253906251],
+    [39.471847268166904, -87.12982177734376],
+    [39.499420678818005, -87.16827392578126],
+    [39.55665359212331, -87.26989746093751]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2024-01-30",
+  "dayname": "January 30, 2024",
+  "time": "Unknown",
+  "rating": "EF0",
+  "length": 13.13,
+  "width": 25,
+  "maxWind": 65,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A waterspout came ashore in Midland County, causing minor damage.",
+  "path": [
+    [38.49365590679723, -87.46490478515626],
+    [38.53881207488586, -87.3907470703125],
+    [38.6054193993042, -87.35778808593751],
+    [38.67411055788728, -87.35778808593751],
+    [38.783450966530474, -87.37976074218751]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2024-03-05",
+  "dayname": "March 5, 2024",
+  "time": "Unknown",
+  "rating": "EF4",
+  "length": 30.84,
+  "width": 100,
+  "maxWind": 180,
+  "deaths": 3,
+  "injuries": 5,
+  "summary": "A strong mountaintop tornado caused EF4 damage throughout northern Florence. The tornado started in central Autauga County and moved east, crossing Interstate 85 and into Tunkhannock County. The tornado then crossed the Rappahannock River, through rural parts of New James City and Spotsylvania, causing 3 deaths and 5 injuries. The tornado continued east and dissipated in western Pittsylvania County.",
+  "path": [
+    [39.49328104472723, -85.56944426631206],
+    [39.52859635515204, -85.28076229141581],
+    [39.53711805089306, -85.18137997218923],
+    [39.535900729829876, -85.09146263574614],
+    [39.53833535060826, -84.92740293416574],
+    [39.54685585085513, -84.84379558624498],
+    [39.60160551389244, -84.67342589614225]
+  ]
+ },
+ {
+  "id": 0,
   "date": "2024-05-01",
   "dayname": "May 1, 2024",
   "time": "Unknown",
