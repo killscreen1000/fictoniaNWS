@@ -1,0 +1,120 @@
+[
+ {
+  "id": 0,
+  "date": "2024-05-01",
+  "dayname": "May 1, 2024",
+  "time": "Unknown",
+  "rating": "EF0",
+  "length": 4.81,
+  "width": 50,
+  "maxWind": 75,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "A weak tornado caused one injury and minor daamge along the Tulpehocken River in Greene and Mahantango counties.",
+  "path": [
+    [39.66946163102442, -79.70273243768266],
+    [39.579494159259596, -79.58126515862794]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2024-05-01",
+  "dayname": "May 1, 2024",
+  "time": "Unknown",
+  "rating": "EF1",
+  "length": 5.83,
+  "width": 75,
+  "maxWind": 90,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "An EF1 tornado caused significant tree damage along the Greene County/Luke County border.",
+  "path": [
+    [39.57827758167779, -79.47241785661787],
+    [39.575844362452635, -79.43298042835336],
+    [39.55029040396628, -79.36830304599955],
+    [39.5040259755165, -79.28627319520936]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2024-05-10",
+  "dayname": "May 10, 2024",
+  "time": "Unknown",
+  "rating": "EF4",
+  "length": 66.7,
+  "width": 300,
+  "maxWind": 180,
+  "deaths": 3,
+  "injuries": 24,
+  "summary": "A violent tornado caused significant damage across Aqualand and Iredale. This long-tracked tornado started in southwestern Floyd County, causing significant damage to forests. The tornado continued east through rural Floyd, Union, and Dare counties before entering Conneaut County, Aqualand. The tornado carved directly through the town of Sundansbury, causing 3 deaths and at least 20 injuries. The tornado dissipated on the Pymatuning River east of town.",
+  "path": [
+    [39.50761449061319, -81.84039369047987],
+    [39.540558604221346, -81.6534678683853],
+    [39.60980382332285, -81.41649891281659],
+    [39.633626333921846, -81.23693237505644],
+    [39.65403910139425, -81.06325326476386],
+    [39.649503451588814, -80.83511545039646],
+    [39.627955051400825, -80.6261117752986],
+    [39.6041305883588, -80.35529011179149],
+    [39.60072642426475, -80.17130800343071],
+    [39.602995885586814, -80.063862452148],
+    [39.60639993812401, -79.94317018906332]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2024-07-16",
+  "dayname": "July 16, 2024",
+  "time": "Unknown",
+  "rating": "EF5",
+  "length": 31.85,
+  "width": 500,
+  "maxWind": 215,
+  "deaths": 14,
+  "injuries": 103,
+  "summary": "An extremely violent tornado obliterated the city of Vernontown in southwestern Seyounby-Sy County. This tornado started in southeastern Eastman County, causing little damage. Almost all of the damage was observed within Vernontown. This tornado was likely EF5 for a long time, but damage of this magnitude was only observed within the city limits of Vernontown. Otherwise, tens of thousands of trees were debarked in Seyounby-Sy County.",
+  "path": [
+    [41.353751597933154, -78.92237204800321],
+    [41.28962010604661, -78.79331781153579],
+    [41.26144488306774, -78.68091573461257],
+    [41.233257499281216, -78.60389949672073],
+    [41.17214312361173, -78.53729085854401],
+    [40.882609704337966, -78.20118566653177]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2024-07-21",
+  "dayname": "July 21, 2024",
+  "time": "Unknown",
+  "rating": "EF0",
+  "length": 26.37,
+  "width": 75,
+  "maxWind": 70,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A QLCS tornado produced minor damage throughout Itasca County.",
+  "path": [
+    [40.98515231368743, -85.32830995144148],
+    [40.62729014897516, -84.73507676768004]
+  ]
+ },
+ {
+  "id": 0,
+  "date": "2024-07-21",
+  "dayname": "July 21, 2024",
+  "time": "Unknown",
+  "rating": "EF0",
+  "length": 39.08,
+  "width": 50,
+  "maxWind": 80,
+  "deaths": 0,
+  "injuries": 1,
+  "summary": "A QLCS tornado caused minor damage across the Iredale/Orbisonia border.",
+  "path": [
+    [40.434354823705945, -84.27922390015803],
+    [40.108585036266824, -83.65060487736521],
+    [40.03373327012279, -83.30715408676643]
+  ]
+ }
+]
