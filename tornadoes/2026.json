@@ -1819,5 +1819,22 @@
     [40.3788744170167, -81.90689030338645],
     [40.36895965115856, -81.86666412655664]
   ]
+ },
+ {
+  "id": 95,
+  "date": "2026-09-19",
+  "dayname": "September 19, 2026",
+  "time": "7:25 PM EDT",
+  "rating": "EF0",
+  "length": "Unknown",
+  "width": 50,
+  "maxWind": 70,
+  "deaths": 0,
+  "injuries": 0,
+  "summary": "A very brief tornado caused some tree damage in northwestern Ragatha County.",
+  "path": [
+    [38.983570645138634, -96.83182991655644],
+    [38.99105359384664, -96.80763224721882]
+  ]
  }
 ]
