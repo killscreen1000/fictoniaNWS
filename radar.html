@@ -683,14 +683,21 @@ function updateURL() {
 console.log("Updating URL...");
 
     const url = new URL(window.location);
+    
+    const center = map.getCenter();
+    const zoom = map.getZoom();
 
     url.searchParams.set("radar", currentRadar);
     url.searchParams.set("product", currentProduct);
+    url.searchParams.set("lat", center.lat.toFixed(4));
+    url.searchParams.set("lon", center.lng.toFixed(4));
+    url.searchParams.set("zoom", zoom);
 
     history.replaceState({}, "", url);
 
 }
 
+map.on("moveend", updateURL);
 </script>
 
 <script>
