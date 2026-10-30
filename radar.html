@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html>
+<head>
+<div class="header">Fictonia Live Radar</div>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    
+        <style>
+        body { margin: 0; }
+        #map {
+  background-color: #696969;
+  height: 100vh;
+}
+
+.header {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 8px 16px;
+    font-family: Arial;
+    border-radius: 8px;
+}
+
+#productSelect {
+  position: absolute;
+  top: 15%;
+  left: 10px;
+  z-index: 1000;
+  background: black;
+  color: white;
+  padding: 5px;
+}
+
+.leaflet-popup-content-wrapper{
+  background: rgba(20,24,29,0.96) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.65) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255,255,255,0.6) !important;
+}
+
+.leaflet-popup-content{
+  color: #ffffff !important;
+}
+.leaflet-popup-tip{
+  display: none !important;
+}
+.leaflet-bar a, .leaflet-control{
+  background: rgba(20,24,29,0.96) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.65) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255,255,255,0.6) !important;
+}
+
+#radarSlider{
+position: absolute;
+    bottom: 10%;
+    left: 50%;
+  background: rgba(20,24,29,0.96) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.65) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255,255,255,0.6) !important;
+  z-index: 1000;
+  transform: translateX(-50%);
+}
+
+#playButton{
+position: absolute;
+    bottom: 2%;
+    left: 44%;
+    height: 35px;
+  background: rgba(20,24,29,0.96) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.65) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255,255,255,0.6) !important;
+  z-index: 1000;
+  transform: translateX(-50%);
+}
+
+#latestButton{
+position: absolute;
+    bottom: 2%;
+    left: 56%;
+    height: 35px;
+  background: rgba(20,24,29,0.96) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.65) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255,255,255,0.6) !important;
+  z-index: 1000;
+  transform: translateX(-50%);
+}
+
+#warningclosebutton{
+position: absolute;
+left: 93%;
+height: 50px;
+width: 50px;
+  background: rgba(20,24,29,0.96) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.65) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255,255,255,0.6) !important;
+  z-index: 1000;
+  transform: translateX(-50%);
+}
+
+#warningTextMenu {
+  position: absolute;
+  left: 50%;
+  height: 90%;
+  width: 50%;
+  top: 2%;
+  transform: translateX(-50%);
+  padding: 15px;
+  z-index: 2000;
+  font-family: monospace;
+  transition: opacity 0.5s;
+  
+  background: rgba(20,24,29,0.96) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.65) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255,255,255,0.6) !important;
+}
+
+   </style>
+</head>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+<select id="productSelect">
+    <option value="sr_bref">Reflectivity</option>
+    <option value="sr_bvel">Velocity</option>
+    <option value="bdhc">Digital Hydrometeor Classification</option>
+    <option value="boha">1 Hour Rainfall</option>
+    <option value="bdsa">Storm Total Rainfall</option>
+</select>
+
+<input type="range" id="radarSlider" style="width: 300px;">
+<button id="playButton" onclick="togglePlay()">Play</button>
+<button id="latestButton">Latest</button>
+<div id="map"></div>
+<div id="warningTextMenu" style="display:none;">
+
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyCuyJ6_BnPbna5I2xRzbVCMBJrGSyO-RUQ",
+  authDomain: "fictonia-warnings.firebaseapp.com",
+  databaseURL: "https://fictonia-warnings-default-rtdb.firebaseio.com",
+  projectId: "fictonia-warnings",
+  storageBucket: "fictonia-warnings.firebasestorage.app",
+  messagingSenderId: "342326059885",
+  appId: "1:342326059885:web:03d172b67d545da7f23064"
+};
+</script>
+
+<script>
+firebase.initializeApp(firebaseConfig);
+var db = firebase.database();
+</script>
+
+<body>
+<script>
+let map;
+let radarLayer;
+
+let frames = [];
+let currentFrame = 0;
+
+let playing = false;
+let animationTimer;
+
+let isPlaying = false;
+let playInterval = null;
+let playbackSpeed = 500; // ms between frames
+
+map = L.map("map", {
+    center: [36, -88],
+    zoom: 6,
+    zoomSnap: 0.1
+});
+
+  // Create base map (dark style)
+
+// Radar layer (already defined)
+map.createPane('fillPane');
+map.getPane('fillPane').style.zIndex = 450;
+map.createPane('radarPane');
+map.getPane('radarPane').style.zIndex = 500;
+map.createPane('countyPane');
+map.getPane('countyPane').style.zIndex = 550;
+map.createPane('boutlinePane');
+map.getPane('boutlinePane').style.zIndex = 700;
+map.createPane('outlinePane');
+map.getPane('outlinePane').style.zIndex = 800;
+map.createPane('popupPane');
+map.getPane('popupPane').style.zIndex = 1400;
+map.createPane('layerPane');
+map.getPane('layerPane').style.zIndex = 900;
+map.createPane('mcdfillPane');
+map.getPane('mcdfillPane').style.zIndex = 475;
+map.createPane('mcdoutlinePane');
+map.getPane('mcdoutlinePane').style.zIndex = 850;
+
+    var drawnItems = new L.FeatureGroup({pane: 'outlinePane'});
+map.addLayer(drawnItems);
+
+var drawnItems2 = new L.FeatureGroup({pane: 'fillPane'});
+map.addLayer(drawnItems2);
+
+    var drawnItems3 = new L.FeatureGroup({pane: 'outlinePane'});
+map.addLayer(drawnItems3);
+
+var drawnItems4 = new L.FeatureGroup({pane: 'fillPane'});
+map.addLayer(drawnItems4);
+
+
+let currentRadar = "gsp";
+let currentProduct = "sr_bref";
+
+const params = new URLSearchParams(window.location.search);
+
+const radarParam = params.get("radar");
+const productParam = params.get("product");
+
+
+radarLayer = L.tileLayer.wms("https://opengeo.ncep.noaa.gov/geoserver/wms", {
+    pane: 'radarPane',
+
+    layers: `k${currentRadar}_${currentProduct}`,
+    format: "image/png",
+    transparent: true,
+    version: "1.3.0",
+    opacity: 1,
+    time: frames[frames.length - 1],
+    updateWhenIdle: true,
+}).addTo(map);
+
+
+var slider = document.getElementById("radarSlider");
+
+const radars = [
+{
+    id: "mhx",
+    name: "Newport/Morehead City, NC",
+    lat: 34.775,
+    lon: -76.877
+},
+{
+    id: "gsp",
+    name: "Greer, SC",
+    lat: 34.883,
+    lon: -82.220
+},
+{
+    id: "ffc",
+    name: "Atlanta/Peachtree City, GA",
+    lat: 33.363,
+    lon: -84.565
+},
+{
+    id: "evx",
+    name: "Eglin AFB, FL",
+    lat: 30.565,
+    lon: -85.922
+},
+{
+    id: "ohx",
+    name: "Nashville, TN",
+    lat: 36.247,
+    lon: -86.563
+},
+{
+    id: "mrx",
+    name: "Knoxville/Tri-Cities, TN",
+    lat: 36.168,
+    lon: -83.402
+},
+{
+    id: "htx",
+    name: "Hytop, AL",
+    lat: 34.930,
+    lon: -86.084
+},
+{
+    id: "dgx",
+    name: "Brandon/Jackson, MS",
+    lat: 32.280,
+    lon: -89.985
+},
+{
+    id: "gwx",
+    name: "Columbus AFB, MS",
+    lat: 33.897,
+    lon: -88.329
+},
+{
+    id: "iln",
+    name: "Wilmington, OH",
+    lat: 39.421,
+    lon: -83.822
+},
+{
+    id: "cle",
+    name: "Cleveland, OH",
+    lat: 41.413,
+    lon: -81.860
+},
+{
+    id: "ilx",
+    name: "Lincoln, IL",
+    lat: 40.151,
+    lon: -89.337
+},
+{
+    id: "lot",
+    name: "Chicago, IL",
+    lat: 41.604,
+    lon: -88.085
+},
+{
+    id: "ind",
+    name: "Indianapolis, IN",
+    lat: 39.707,
+    lon: -86.280
+},
+{
+    id: "iwx",
+    name: "North Webster, IN",
+    lat: 41.359,
+    lon: -85.700
+},
+{
+    id: "lvx",
+    name: "Louisville, KY",
+    lat: 37.975,
+    lon: -85.944
+},
+{
+    id: "jkl",
+    name: "Jackson, KY",
+    lat: 37.591,
+    lon: -83.313
+},
+{
+    id: "rlx",
+    name: "Charleston, WV",
+    lat: 38.312,
+    lon: -81.723
+},
+{
+    id: "pbz",
+    name: "Pittsburgh, PA",
+    lat: 40.531,
+    lon: -80.218
+},
+{
+    id: "ccx",
+    name: "State College, PA",
+    lat: 40.923,
+    lon: -78.004
+},
+{
+    id: "bgm",
+    name: "Binghamton, NY",
+    lat: 42.200,
+    lon: -75.985
+},
+{
+    id: "sgf",
+    name: "Springfield, MO",
+    lat: 37.235,
+    lon: -93.400
+},
+{
+    id: "lsx",
+    name: "St. Louis, MO",
+    lat: 38.698,
+    lon: -90.682
+},
+{
+    id: "dvn",
+    name: "Davenport, IA",
+    lat: 41.611,
+    lon: -90.580
+},
+{
+    id: "ilx",
+    name: "Lincoln, IL",
+    lat: 40.150,
+    lon: -89.337
+},
+{
+    id: "tlx",
+    name: "Oklahoma City, OK",
+    lat: 35.333,
+    lon: -97.277
+},
+{
+    id: "shv",
+    name: "Shreveport, LA",
+    lat: 32.450,
+    lon: -93.841
+},
+{
+    id: "poe",
+    name: "Leesville, LA",
+    lat: 31.155607,
+    lon: -92.976103
+},
+{
+    id: "hdc",
+    name: "New Orleans, LA",
+    lat: 30.519380,
+    lon: -90.406462
+},
+{
+    id: "hpx",
+    name: "Clarksville, TN",
+    lat: 36.736622,
+    lon: -87.282978
+},
+{
+    id: "pah",
+    name: "Paducah, KY",
+    lat: 37.068328,
+    lon: -88.768158
+},
+{
+    id: "vnx",
+    name: "Enid, OK",
+    lat: 36.741085,
+    lon: -98.12439
+},
+{
+    id: "inx",
+    name: "Tulsa, OK",
+    lat: 36.176683,
+    lon: -95.559082
+},
+{
+    id: "srx",
+    name: "Fort Smith, AR",
+    lat: 35.289348,
+    lon: -94.361572
+},
+{
+    id: "lzk",
+    name: "Little Rock, AR",
+    lat: 34.840849,
+    lon: -92.257707
+},
+{
+    id: "nqa",
+    name: "Memphis, TN",
+    lat: 35.342015,
+    lon: -89.869537
+},
+{
+    id: "eax",
+    name: "Kansas City, MO",
+    lat: 38.80975,
+    lon: -94.254456
+},
+{
+    id: "ict",
+    name: "Wichita, KS",
+    lat: 37.654445,
+    lon: -97.443042
+},
+{
+    id: "twx",
+    name: "Topeka, KS",
+    lat: 38.996814,
+    lon: -96.232595
+},
+{
+    id: "uex",
+    name: "Hastings, NE",
+    lat: 40.320830,
+    lon: -98.441998
+},
+{
+    id: "oax",
+    name: "Omaha, NE",
+    lat: 41.320476,
+    lon: -96.367218
+},
+{
+    id: "dix",
+    name: "Toms River, NJ",
+    lat: 39.946999,
+    lon: -74.410885
+},
+];
+
+radars.forEach(radar => {
+
+    const marker = L.circleMarker([radar.lat, radar.lon], {
+        radius: 8,
+        color: "#ffffff",
+        weight: 2,
+        fillColor: "#0080ff",
+        fillOpacity: 1,
+        pane: 'layerPane',
+        bubblingMouseEvents: false
+    });
+
+marker.bindTooltip(radar.name + " (" + radar.id + ")");
+
+    marker.addTo(map);
+    
+    marker.on("click", () => {
+    
+    loadRadar(radar.id);
+    
+    map.flyTo([radar.lat, radar.lon], 8, {
+    duration: 0.5
+});
+
+});
+
+});
+
+async function loadRadarTimes() {
+
+    const capabilitiesURL = `https://opengeo.ncep.noaa.gov/geoserver/k${currentRadar}/ows?service=wms&version=1.3.0&request=GetCapabilities`;
+
+    console.log("Loading radar times...");
+
+    const response = await fetch(capabilitiesURL);
+    const text = await response.text();
+
+    const xml = new DOMParser().parseFromString(text, "text/xml");
+
+    const dimension = xml.querySelector('Dimension[name="time"]');
+
+    if (!dimension) {
+        console.error("No time dimension found in WMS capabilities");
+        return [];
+    }
+
+    const times = dimension.textContent
+        .trim()
+        .split(",");
+
+    console.log("Loaded times:", times.length);
+
+    return times;
+}
+
+async function initializeRadar() {
+
+    frames = await loadRadarTimes();
+
+    console.log("Radar initialized");
+
+    slider.max = frames.length - 1;
+    slider.value = frames.length - 1;
+
+    showFrame(frames.length - 1);
+}
+
+function showFrame(index) {
+
+    currentFrame = index;
+
+    const time = frames[index];
+
+    radarLayer.setParams({
+         layers: `k${currentRadar}_${currentProduct}`,
+         time: time
+    });
+
+    slider.value = index;
+}
+
+slider.oninput = () => {
+
+    showFrame(Number(slider.value));
+
+};
+
+initializeRadar();
+
+function playRadar() {
+
+    if (isPlaying) return; // prevents duplicate loops
+
+    isPlaying = true;
+
+    playInterval = setInterval(() => {
+
+        currentFrame++;
+
+        if (currentFrame >= frames.length) {
+            currentFrame = 0; // loop back
+        }
+
+        slider.value = currentFrame;
+        showFrame(currentFrame);
+
+    }, playbackSpeed);
+}
+
+function pauseRadar() {
+
+    isPlaying = false;
+
+    if (playInterval) {
+        clearInterval(playInterval);
+        playInterval = null;
+    }
+}
+
+function togglePlay() {
+
+    if (isPlaying) {
+        pauseRadar();
+    } else {
+        playRadar();
+    }
+}
+
+async function loadRadar(radar) {
+console.log("entered loadradar " + radar);
+
+
+
+    currentRadar = radar;
+
+    frames = await loadRadarTimes(radar, currentProduct);
+
+    slider.max = frames.length - 1;
+
+    currentFrame = frames.length - 1;
+
+    slider.value = currentFrame;
+
+    showFrame(currentFrame);
+    updateURL();
+
+}
+
+productSelect.addEventListener("change", async function () {
+
+    currentProduct = this.value;
+    updateURL();
+
+    await loadRadar(currentRadar);
+    
+
+});
+
+document.getElementById("latestButton").onclick = function () {
+
+    pauseRadar();
+
+    currentFrame = frames.length - 1;
+
+    slider.value = currentFrame;
+
+    showFrame(currentFrame);
+
+}
+
+function updateURL() {
+
+console.log("Updating URL...");
+
+    const url = new URL(window.location);
+
+    url.searchParams.set("radar", currentRadar);
+    url.searchParams.set("product", currentProduct);
+
+    history.replaceState({}, "", url);
+
+}
+
+</script>
+
+<script>
+
+map.createPane('waterPane');
+map.getPane('waterPane').style.zIndex = 150;
+map.getPane('waterPane').style.pointerEvents = 'none';
+
+var lightBackground = L.imageOverlay(
+  'https://killscreen1000.github.io/fictoniaNWS/website/fictoniaradarbackmap-light.png',
+  [[27.7, -99.942], [43.3, -73]],
+  {
+    pane: 'waterPane',
+    opacity: 1
+  }
+);
+
+var lightCounties = L.imageOverlay(
+  'https://killscreen1000.github.io/fictoniaNWS/website/fictoniaradarmap-light.png',
+  [[27.7, -99.942], [43.3, -73]],
+  {
+    pane: 'countyPane',
+    opacity: 1
+  }
+);
+
+var lightMode = L.layerGroup([
+  lightBackground,
+  lightCounties
+]);
+
+// DARK MAP
+var iemBackground = L.imageOverlay(
+  'https://killscreen1000.github.io/fictoniaNWS/website/fictoniaradarbackmap.png',
+  [[27.7, -99.942], [43.3, -73]],
+  {
+    pane: 'waterPane',
+    opacity: 1
+  }
+);
+
+var iemCounties = L.imageOverlay(
+  'https://killscreen1000.github.io/fictoniaNWS/website/fictoniaradarmap.png',
+  [[27.7, -99.942], [43.3, -73]],
+  {
+    pane: 'countyPane',
+    opacity: 1
+  }
+);
+
+var iemMode = L.layerGroup([
+  iemBackground,
+  iemCounties
+]);
+
+var darkBackground = L.imageOverlay(
+  'https://killscreen1000.github.io/fictoniaNWS/website/fictoniaradarbackmap-dark.png',
+  [[27.7, -99.942], [43.3, -73]],
+  {
+    pane: 'waterPane',
+    opacity: 1
+  }
+);
+
+var darkCounties = L.imageOverlay(
+  'https://killscreen1000.github.io/fictoniaNWS/website/fictoniaradarmap-dark.png',
+  [[27.7, -99.942], [43.3, -73]],
+  {
+    pane: 'countyPane',
+    opacity: 1
+  }
+);
+
+var darkMode = L.layerGroup([
+  darkBackground,
+  darkCounties
+]);
+
+var satBackground = L.imageOverlay(
+  'https://killscreen1000.github.io/fictoniaNWS/website/fictoniaradarbackmap-satellite.png',
+  [[27.7, -99.942], [43.3, -73]],
+  {
+    pane: 'waterPane',
+    opacity: 1
+  }
+);
+
+var satCounties = L.imageOverlay(
+  'https://killscreen1000.github.io/fictoniaNWS/website/fictoniaradarmap-dark.png',
+  [[27.7, -99.942], [43.3, -73]],
+  {
+    pane: 'countyPane',
+    opacity: 1
+  }
+);
+
+var satMode = L.layerGroup([
+  satBackground,
+  satCounties
+]);
+
+var baseMaps = {
+  "Light": lightMode,
+  "IEM": iemMode,
+  "Dark": darkMode,
+  "Satellite": satMode
+};
+
+// Load saved preference
+var savedMapMode = localStorage.getItem("fictoniaMapMode");
+
+console.log("Saved map mode:", savedMapMode);
+
+if (savedMapMode && baseMaps[savedMapMode]) {
+    console.log("Loading saved map mode:", savedMapMode);
+    baseMaps[savedMapMode].addTo(map);
+} else {
+    console.log("No valid saved mode found, loading IEM");
+    iemMode.addTo(map);
+}
+
+
+// Layer control
+L.control.layers(baseMaps, null, {
+    position: 'topright'
+}).addTo(map);
+
+
+// Save preference when changed
+map.on('baselayerchange', function(e) {
+    console.log("Saving map mode:", e.name);
+    localStorage.setItem("fictoniaMapMode", e.name);
+});
+
+  </script>
+  
+  <script>
+var popup = L.popup();
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
+}
+
+map.on('click', onMapClick);
+</script>
+
+
+
+<script>
+var citiesLayer = L.layerGroup({pane: 'layerPane'});
+
+// Cities
+var fictoniaCities = [
+{ name: "Celestria", coords: [33.3, -82.85], minZoom: 5},
+{ name: "New Bern", coords: [31.1, -85.5], minZoom: 5 },
+{ name: "Aura City", coords: [36, -87.65], minZoom: 6 },
+{ name: "Fort Ashland", coords: [38.65, -88.3], minZoom: 5 },
+{ name: "Meridian", coords: [37, -82.05], minZoom: 6 },
+{ name: "Madawaska", coords: [34.2, -86.8], minZoom: 6 },
+{ name: "Rockbridge", coords: [37.766372, -82.529297], minZoom: 6 },
+{ name: "Sussex", coords: [40.444857, -90.078278], minZoom: 6, pane: 'layerPane'},
+{ name: "Herkimer", coords: [40.2763837, -89.813232], minZoom: 8 },
+{ name: "Octavio", coords: [40.492915, -89.906616], minZoom: 10 },
+
+];
+
+var cityMarkers = [];
+
+fictoniaCities.forEach(function(city) {
+
+  var marker = L.marker(city.coords, {
+  icon: L.divIcon({
+    className: 'city-label',
+        html: city.name,
+        iconSize: [100, 20],
+        iconAnchor: [40, 10] 
+  })
+});
+
+  citiesLayer.addLayer(marker);
+
+});
+
+map.hasLayer(citiesLayer)
+
+// Show/hide markers on zoom
+map.on("zoomend", function() {
+
+  if (!map.hasLayer(citiesLayer)) return;
+
+  var currentZoom = map.getZoom();
+
+  citiesLayer.eachLayer(function(layer) {
+
+    var city = fictoniaCities.find(c =>
+      c.coords[0] === layer.getLatLng().lat &&
+      c.coords[1] === layer.getLatLng().lng
+    );
+
+    if (currentZoom >= city.minZoom) {
+      layer.getElement().style.display = "block";
+    } else {
+      layer.getElement().style.display = "none";
+    }
+
+  });
+
+});
+</script>
+
+<script>
+var nwsWarningsLayer = L.layerGroup({pane: 'layerPane'});
+
+function loadNWSWarnings() {
+
+  fetch("https://api.weather.gov/alerts/active")
+    .then(response => response.json())
+    .then(data => {
+
+      nwsWarningsLayer.clearLayers();
+
+      L.geoJSON(data, {
+
+style: function(feature) {
+        let event = feature.properties.event;
+
+        if (event.includes("Tornado")) {
+          return { color: "#ff0000", weight: 2, fillOpacity: 0.3, pane: 'layerPane' };
+        }
+        if (event.includes("Severe Thunderstorm")) {
+          return { color: "#ffff00", weight: 2, fillOpacity: 0.3, pane: 'layerPane' };
+        }
+        if (event.includes("Flood")) {
+          return { color: "#00ff00", weight: 2, fillOpacity: 0.3, pane: 'layerPane'  };
+        }
+
+        return { color: "#00ffff", weight: 2, fillOpacity: 0.2, pane: 'layerPane'  };
+      },
+
+        onEachFeature: function(feature, layer) {
+        layer.bindPopup(
+          "<b>National Weather Service IRL</b><br>" +
+          feature.properties.event + "<br>" +
+          feature.properties.areaDesc
+        );
+      }
+
+      }).addTo(nwsWarningsLayer);
+
+    });
+
+}
+
+loadNWSWarnings();
+</script>
+
+<script>
+var cwaLayer = L.imageOverlay('https://killscreen1000.github.io/fictoniaNWS/website/counties-blank-backgroundCWA3.png',  // path to your image
+    [[27.7, -99.942], [43.3, -73]], // southwest and northeast bounds of the overlay
+    { opacity: 1, pane: 'layerPane' }
+);
+</script>
+
+
+<script>
+var SPCDay1Layer = L.imageOverlay('https://killscreen1000.github.io/fictoniaNWS/spc/outlooks/now/day1_cat.png',  // path to your image
+    [[24.7, -99.55], [43.2, -73]], // southwest and northeast bounds of the overlay
+    { opacity: 0.5, pane: 'layerPane' }
+);
+</script>
+<script>
+var SPCDay1TorLayer = L.imageOverlay('https://killscreen1000.github.io/fictoniaNWS/spc/outlooks/now/day1_tor.png',  // path to your image
+    [[24.7, -99.55], [43.2, -73]], // southwest and northeast bounds of the overlay
+    { opacity: 0.5, pane: 'layerPane' }
+);
+</script>
+<script>
+var SPCDay1WindLayer = L.imageOverlay('https://killscreen1000.github.io/fictoniaNWS/spc/outlooks/now/day1_wind.png',  // path to your image
+    [[24.7, -99.55], [43.2, -73]], // southwest and northeast bounds of the overlay
+    { opacity: 0.5, pane: 'layerPane' }
+);
+</script>
+<script>
+var SPCDay1HailLayer = L.imageOverlay('https://killscreen1000.github.io/fictoniaNWS/spc/outlooks/now/day1_hail.png',  // path to your image
+    [[24.7, -99.55], [43.2, -73]], // southwest and northeast bounds of the overlay
+    { opacity: 0.5, pane: 'layerPane' }
+);
+</script>
+
+
+<script>
+var SPCDay2Layer = L.imageOverlay('https://killscreen1000.github.io/fictoniaNWS/spc/outlooks/now/day2_cat.png',  // path to your image
+    [[24.7, -99.55], [43.2, -73]], // southwest and northeast bounds of the overlay
+    { opacity: 0.5, pane: 'layerPane' }
+);
+</script>
+<script>
+var SPCDay2TorLayer = L.imageOverlay('https://killscreen1000.github.io/fictoniaNWS/spc/outlooks/now/day2_tor.png',  // path to your image
+    [[24.7, -99.55], [43.2, -73]], // southwest and northeast bounds of the overlay
+    { opacity: 0.5, pane: 'layerPane' }
+);
+</script>
+<script>
+var SPCDay2WindLayer = L.imageOverlay('https://killscreen1000.github.io/fictoniaNWS/spc/outlooks/now/day2_wind.png',  // path to your image
+    [[24.7, -99.55], [43.2, -73]], // southwest and northeast bounds of the overlay
+    { opacity: 0.5, pane: 'layerPane' }
+);
+</script>
+<script>
+var SPCDay2HailLayer = L.imageOverlay('https://killscreen1000.github.io/fictoniaNWS/spc/outlooks/now/day2_hail.png',  // path to your image
+    [[24.7, -99.55], [43.2, -73]], // southwest and northeast bounds of the overlay
+    { opacity: 0.5, pane: 'layerPane' }
+);
+</script>
+
+
+<script>
+var SPCDay3Layer = L.imageOverlay('https://killscreen1000.github.io/fictoniaNWS/spc/outlooks/now/day3_cat.png',  // path to your image
+    [[24.7, -99.55], [43.2, -73]], // southwest and northeast bounds of the overlay
+    { opacity: 0.5, pane: 'layerPane' }
+);
+</script>
+<script>
+var SPCDay3TorLayer = L.imageOverlay('https://killscreen1000.github.io/fictoniaNWS/spc/outlooks/now/day3_tor.png',  // path to your image
+    [[24.7, -99.55], [43.2, -73]], // southwest and northeast bounds of the overlay
+    { opacity: 0.5, pane: 'layerPane' }
+);
+</script>
+<script>
+var SPCDay3WindLayer = L.imageOverlay('https://killscreen1000.github.io/fictoniaNWS/spc/outlooks/now/day3_wind.png',  // path to your image
+    [[24.7, -99.55], [43.2, -73]], // southwest and northeast bounds of the overlay
+    { opacity: 0.5, pane: 'layerPane' }
+);
+</script>
+<script>
+var SPCDay3HailLayer = L.imageOverlay('https://killscreen1000.github.io/fictoniaNWS/spc/outlooks/now/day3_hail.png',  // path to your image
+    [[24.7, -99.55], [43.2, -73]], // southwest and northeast bounds of the overlay
+    { opacity: 0.5, pane: 'layerPane' }
+);
+</script>
+
+
+<script>
+var SPCDay4Layer = L.imageOverlay('https://killscreen1000.github.io/fictoniaNWS/spc/outlooks/now/day4.png',  // path to your image
+    [[24.7, -99.55], [43.2, -73]], // southwest and northeast bounds of the overlay
+    { opacity: 0.5, pane: 'layerPane' }
+);
+</script>
+<script>
+var SPCDay5Layer = L.imageOverlay('https://killscreen1000.github.io/fictoniaNWS/spc/outlooks/now/day5.png',  // path to your image
+    [[24.7, -99.55], [43.2, -73]], // southwest and northeast bounds of the overlay
+    { opacity: 0.5, pane: 'layerPane' }
+);
+</script>
+<script>
+var SPCDay6Layer = L.imageOverlay('https://killscreen1000.github.io/fictoniaNWS/spc/outlooks/now/day6.png',  // path to your image
+    [[24.7, -99.55], [43.2, -73]], // southwest and northeast bounds of the overlay
+    { opacity: 0.5, pane: 'layerPane' }
+);
+</script>
+<script>
+var SPCDay7Layer = L.imageOverlay('https://killscreen1000.github.io/fictoniaNWS/spc/outlooks/now/day7.png',  // path to your image
+    [[24.7, -99.55], [43.2, -73]], // southwest and northeast bounds of the overlay
+    { opacity: 0.5, pane: 'layerPane' }
+);
+</script>
+<script>
+var SPCDay8Layer = L.imageOverlay('https://killscreen1000.github.io/fictoniaNWS/spc/outlooks/now/day8.png',  // path to your image
+    [[24.7, -99.55], [43.2, -73]], // southwest and northeast bounds of the overlay
+    { opacity: 0.5, pane: 'layerPane' }
+);
+</script>
+
+<script>
+var CountyNames = L.imageOverlay('https://killscreen1000.github.io/fictoniaNWS/website/countynames.png',  // path to your image
+    [[27.7, -100.45], [43.3, -72.15]], // southwest and northeast bounds of the overlay
+    { opacity: 1, pane: 'layerPane' }
+);
+</script>
+
+<script>
+var ForecastZones = L.imageOverlay('https://killscreen1000.github.io/fictoniaNWS/website/forecastzones.png',  // path to your image
+    [[27.7, -99.942], [43.3, -73]], // southwest and northeast bounds of the overlay
+    { opacity: 0.5, pane: 'layerPane' }
+);
+</script>
+
+
+
+<script>
+var overlays = {
+  "Cities": citiesLayer,
+  "NWS Warnings": nwsWarningsLayer,
+  "CWAs": cwaLayer,
+  "SPC Day 1": SPCDay1Layer,
+  "SPC Day 1 Tornado": SPCDay1TorLayer,
+  "SPC Day 1 Wind": SPCDay1WindLayer,
+  "SPC Day 1 Hail": SPCDay1HailLayer,
+  "SPC Day 2": SPCDay2Layer,
+  "SPC Day 2 Tornado": SPCDay2TorLayer,
+  "SPC Day 2 Wind": SPCDay2WindLayer,
+  "SPC Day 2 Hail": SPCDay2HailLayer,
+  "SPC Day 3": SPCDay3Layer,
+  "SPC Day 3 Tornado": SPCDay3TorLayer,
+  "SPC Day 3 Wind": SPCDay3WindLayer,
+  "SPC Day 3 Hail": SPCDay3HailLayer,
+  "SPC Day 4": SPCDay4Layer,
+  "SPC Day 5": SPCDay5Layer,
+  "SPC Day 6": SPCDay6Layer,
+  "SPC Day 7": SPCDay7Layer,
+  "SPC Day 8": SPCDay8Layer,
+  "County Labels": CountyNames,
+  "Forecast Zones": ForecastZones,
+  
+};
+
+L.control.layers(null, overlays, {
+  collapsed: true
+}).addTo(map);
+</script>
+
+
+
+<script>
+setInterval(loadNWSWarnings, 15000);
+</script>
+
+<script>
+
+function buildWarningInfo(w) {
+
+  let text = "<b style=background-color:" + getRadarColor(w.type) + ";>" + getWarningName(w.type) + "</b><br>";
+  
+  
+    text += "Issued: " + w.issuedAt + "<br>";
+  text += "Office: " + w.office + "<br>";
+
+if (w.type === "MCD-SVR") {
+    text += "<br><b>Mesoscale Discussion #" + w.mcdnumber + "</b><br>";
+    text += "Watch Probability: " + w.probs;
+  }
+  
+  if (w.type === "MCD-TOR") {
+    text += "<br><b>Mesoscale Discussion #" + w.tormcdnumber + "</b><br>";
+    text += "Watch Probability: " + w.torprobs;
+  }
+
+  // Severe-specific info
+  if (w.type === "SVR") {
+    text += "<br><b>Threats:</b><br>";
+    text += "Wind: " + w.wind + " MPH<br>";
+    text += "Hail: " + w.hail + " IN<br>";
+
+    if (w.torPossible) {
+      text += "Tornado: Possible<br>";
+    }
+  }
+  
+  if (w.type === "TOA") {
+    if (w.toapds) {
+      text += "<br><b>THIS IS A PARTICULARLY DANGEROUS SITUATION!</b><br>";
+    }
+  }
+  
+  // SPS-specific info
+  if (w.type === "SPS") {
+    text += "<br><b>Threats:</b><br>";
+    text += "Wind: " + w.spswind + " MPH<br>";
+    text += "Hail: " + w.spshail + " IN<br>";
+  }
+  
+  if (w.type === "TOR") {
+    text += "<br><b>Status:</b><br>";
+
+    if (w.emergency) {
+      text += "<b>TORNADO EMERGENCY</b><br>";
+    } else if (w.pds) {
+      text += "<b>Particularly Dangerous Situation</b><br>";
+    }
+
+    if (w.confirmed) {
+      text += "Confirmed Tornado<br>";
+    } else {
+      text += "Radar Indicated<br>";
+    }
+  }
+  if (w.type === "TOR-E") {
+    text += "<br><b>Status:</b><br>";
+
+    if (w.emergency) {
+      text += "<b>TORNADO EMERGENCY</b><br>";
+    } else if (w.pds) {
+      text += "<b>Particularly Dangerous Situation</b><br>";
+    }
+
+    if (w.confirmed) {
+      text += "Confirmed Tornado<br>";
+    } else {
+      text += "Radar Indicated<br>";
+    }
+  }
+  
+  if (w.type === "FFW") {
+    text += "<b><br>Status:</b><br>";
+
+    if (w.ffwemergency) {
+      text += "<b>FLASH FLOOD EMERGENCY</b><br>";
+    } else if (w.ffwconsiderable) {
+      text += "<b>Flood Threat: Considerable</b><br>";
+    }
+
+    if (w.confirmed) {
+      text += "Flash Flood: Confirmed<br>";
+    } else {
+      text += "Flash Flood: Radar Indicated<br>";
+    }
+        text += "Expected Rainfall Rate: " + w.ffwlowrate + "-" + w.ffwhighrate + " Inches In " + w.ffwrate + "<br>";
+  }
+  
+  if (w.type === "FFW-E") {
+    text += "<b><br>Status:</b><br>";
+
+    if (w.ffwemergency) {
+      text += "<b>FLASH FLOOD EMERGENCY</b><br>";
+    } else if (w.ffwconsiderable) {
+      text += "<b>Flood Threat: Considerable</b><br>";
+    }
+
+    if (w.confirmed) {
+      text += "Flash Flood: Confirmed<br>";
+    } else {
+      text += "Flash Flood: Radar Indicated<br>";
+    }
+        text += "Expected Rainfall Rate: " + w.ffwlowrate + "-" + w.ffwhighrate + " Inches In " + w.ffwrate + "<br>";
+  }
+  
+
+  text += "<br>Expires: " + w.expires + "<br>";
+  
+  text += "<br>Issued by: " + w.signature + "<br>";
+
+console.log(text);
+
+  return text;
+}
+
+function buildWarningMenuInfo(w) {
+
+let text = `<button id="warningclosebutton" onclick="closeMenu()"> X </button></div>`
+
+ text += "<b style=background-color:" + getRadarColor(w.type) + ";>" + getWarningName(w.type) + "</b><br>";
+  text += w.warningtext + "<br>";
+
+
+  return text;
+}
+
+
+function buildPopup(w) {
+return buildWarningInfo(w) +
+    `<br><button onclick="showDetails('${w}')">View Details</button>`;
+    
+}
+
+function showDetails(w) {
+ warningTextMenu.style.display = "block";
+ map.closePopup();
+}
+
+function closeMenu() {
+warningTextMenu.style.display = "none";
+}
+
+
+function getRadarColor(type) {
+  switch(type) {
+      case "AQA": return "#808080";
+      case "BZW": return "#FF4500";
+      case "CFY": return "#7CFC00";
+      case "CFA": return "#66CDAA";
+      case "CFW": return "#228B22";
+      case "CWY": return "#AFEEEE";
+      case "FGY": return "#708090";
+      case "DSW": return "#FFE4C4";
+      case "EAW": return "#363636";
+      case "ECA": return "#5F9EA0";
+      case "ECW": return "#0000FF";
+      case "EHA": return "#800000";
+      case "EHW": return "#C71585";
+      case "FRW": return "#A0522D";
+      case "FLY": return "#00FF7F";
+      case "ZFY": return "#008080";
+      case "FNW": return "#FF00FF";
+      case "HTY": return "#FF7F50";
+      case "HHS": return "#FFE4C4";
+      case "HWA": return "#B8860B";
+      case "HWW": return "#DAA520";
+      case "HUA": return "#FF00FF";
+      case "HUW": return "#DC143C";
+      case "ISW": return "#8B008B";
+      case "LEW": return "#008B8B";
+      case "LWY": return "#D2B48C";
+      case "LFY": return "#7CFC00";
+      case "LFA": return "#66CDAA";
+      case "LFW": return "#228B22";
+      case "PRS": return "#4A86E8";
+      case "FWW": return "#FF1493";
+      case "SQW": return "#C71585";
+      case "SQA": return "#FF80FF";
+      case "SSA": return "#DB7FF7";
+      case "SSW": return "#B524F7";
+      case "TST": return "#F0FFFF";
+      case "TRW": return "#B22222";
+      case "TRA": return "#F08080";
+      case "UHY": return "#FF7F50";
+      case "WIY": return "#D2B48C";
+      case "WSW": return "#FF69B4";
+      case "WSA": return "#4682B4";
+      case "WWY": return "#7B68EE";
+      case "TOR": return "#FF0000";
+      case "TOR-E": return "#B524F7";
+      case "SVR": return "#FFA500";
+      case "SPS": return "#FFF2CC";
+      case "FFW": return "#8B0000";
+      case "FLW": return "#00FF00";
+      case "FFW-E": return "#400000";
+      case "FEW": return "#4A86E8";
+      case "SMW": return "#FFA500";
+      case "TOA": return "#FFFF00";
+      case "SVA": return "#DB7093";
+      case "FLA": return "#2E8B57";
+      case "FZW": return "#483D8B";
+      case "FRY": return "#6495ED";
+      case "FZA": return "#00FFFF";
+      
+      case "MCD-SVR": return "#0000FF";
+      case "MCD-TOR": return "#FF0000";
+      case "MCD-TOA": return "#0000FF";
+      case "MCD-TOA": return "#FF0000";
+      case "MCD-SQW": return "#FF00FF";
+    default: return "white";
+  }
+}
+
+function getWarningName(type) {
+  switch(type) {
+    case "AQA": return "Air Quality Alert";
+    case "BZW": return "Blizzard Warning";
+    case "CFY": return "Coastal Flood Advisory";
+    case "CFA": return "Coastal Flood Watch";
+    case "CFW": return "Coastal Flood Warning";
+    case "CWY": return "Cold Weather Advisory";
+    case "FGY": return "Dense Fog Advisory";
+    case "DSW": return "Dust Storm Warning";
+    case "EAW": return "Extreme Air Quality Warning";
+    case "ECA": return "Extreme Cold Watch";
+    case "ECW": return "Extreme Cold Warning";
+    case "EHA": return "Extreme Heat Watch";
+    case "EHW": return "Extreme Heat Warning";
+    case "FRW": return "Fire Warning";
+    case "FFW": return "Flash Flood Warning";
+    case "FFW-E": return "Flash Flood Warning";
+    case "FEW": return "Flash Freeze Warning";
+    case "FLY": return "Flood Advisory";
+    case "FLW": return "Flood Warning";
+    case "FLA": return "Flood Watch";
+    case "FZW": return "Freeze Warning";
+    case "FZA": return "Freeze Watch";
+    case "ZFY": return "Freezing Fog Advisory";
+    case "FNW": return "Freezing Rain Warning";
+    case "FRY": return "Frost Advisory";
+    case "HTY": return "Heat Advisory";
+    case "HHS": return "High Humidity Statement";
+    case "HWA": return "High Wind Watch";
+    case "HWW": return "High Wind Warning";
+    case "HUA": return "Hurricane Watch";
+    case "HUW": return "Hurricane Warning";
+    case "ISW": return "Ice Storm Warning";
+    case "LEW": return "Lake Effect Snow Warning";
+    case "LWY": return "Lake Wind Advisory";
+    case "LFY": return "Lakeshore Flood Advisory";
+    case "LFW": return "Lakeshore Flood Warning";
+    case "PRS": return "Permafrost Statement";
+    case "FWW": return "Red Flag Warning";
+    case "SVR": return "Severe Thunderstorm Warning";
+    case "SVA": return "Severe Thunderstorm Watch";
+    case "SQW": return "Snow Squall Warning";
+    case "SQA": return "Snow Squall Watch";
+    case "SMW": return "Special Marine Warning";
+    case "SPS": return "Special Weather Statement";
+    case "SSW": return "Storm Surge Warning";
+    case "SSA": return "Storm Surge Watch";
+    case "TST": return "Test";
+    case "TOR": return "Tornado Warning";
+    case "TOR-E": return "Tornado Warning";
+    case "TOA": return "Tornado Watch";
+    case "TRW": return "Tropical Storm Warning";
+    case "TRA": return "Tropical Storm Watch";
+    case "UHY": return "Urban Heat Advisory";
+    case "WIY": return "Wind Advisory";
+    case "WSW": return "Winter Storm Warning";
+    case "WSA": return "Winter Storm Watch";
+    case "WSA": return "Winter Weather Advisory";
+    
+    case "MCD-SVR": return "Mesoscale Discussion - Severe Potential";
+    case "MCD-TOR": return "Mesoscale Discussion - Tornado Potential";
+    case "MCD-SVA": return "Mesoscale Discussion - Severe Thunderstorm Watch";
+    case "MCD-TOA": return "Mesoscale Discussion - Tornado Watch";
+    case "MCD-SQW": return "Mesoscale Discussion - Snow Squall";
+    default: return type;
+  }
+}
+
+function getWeight(type) {
+  switch(type) {
+    case "FFW-E": return "10";
+    case "TOR-E": return "10";
+    default: return "7";
+  }
+}
+
+function getDash(type) {
+  switch(type) {
+    case "FFW-E": return "15";
+    case "TOR-E": return "15";
+    default: return "0";
+  }
+}
+</script>
+
+<script>
+db.ref("warnings").on("value", function(snapshot) {
+  var data = snapshot.val();
+  if (!data) return;
+
+  drawnItems.clearLayers();
+  drawnItems2.clearLayers();
+
+  for (let key in data) {
+    let w = data[key];
+
+    if (Date.now() > w.expiresAt) {
+  db.ref("warnings/" + key).remove();
+  continue;
+}
+
+    let polygon = L.polygon(w.coords, {
+    pane: 'boutlinePane',
+      color: "black",
+      weight: getWeight(w.type),
+      dashArray: getDash(w.type),
+       fill: false,
+    });
+    
+    let polygon3 = L.polygon(w.coords, {
+    pane: 'outlinePane',
+      color: getRadarColor(w.type),
+      weight: 3,
+      dashArray: getDash(w.type),
+       fill: false,
+    });
+    
+    let polygon2 = L.polygon(w.coords, {
+      pane: 'fillPane',
+      color: getRadarColor(w.type),
+      weight: 0,
+      stroke: false,
+      fillOpacity: 1
+    });
+
+
+    polygon2.bindPopup(buildPopup(w),
+    {pane: 'popupPane'}
+    );
+    
+    polygon2.on("click", function() {
+    
+    let warntext = buildWarningMenuInfo(w);
+    
+    document.getElementById("warningTextMenu").innerHTML = warntext;
+    });
+    
+    
+drawnItems.addLayer(polygon3);
+    drawnItems.addLayer(polygon);
+    drawnItems2.addLayer(polygon2);
+    
+  }
+});
+</script>
+
+<script>
+db.ref("mcd").on("value", function(snapshot) {
+  var data = snapshot.val();
+  if (!data) return;
+
+  drawnItems3.clearLayers();
+  drawnItems4.clearLayers();
+
+  for (let key in data) {
+    let w = data[key];
+
+    if (Date.now() > w.expiresAt) {
+  db.ref("mcd/" + key).remove();
+  continue;
+}
+
+    let polygon = L.polygon(w.coords, {
+    pane: 'boutlinePane',
+      color: "black",
+      weight: 7,
+       fill: false,
+    });
+    
+    let polygon3 = L.polygon(w.coords, {
+    pane: 'outlinePane',
+      color: getRadarColor(w.type),
+      weight: 3,
+       fill: false,
+    });
+
+
+    polygon3.bindPopup(buildPopup(w),
+    {pane: 'popupPane'}
+    );
+   
+    
+drawnItems3.addLayer(polygon3);
+    drawnItems3.addLayer(polygon);
+    
+  }
+});
+</script>
+
+</body>
+</html>
