@@ -234,8 +234,12 @@ let currentProduct = "sr_bref";
 
 const params = new URLSearchParams(window.location.search);
 
-const radarParam = params.get("radar");
-const productParam = params.get("product");
+currentRadar = params.get("radar");
+currentProduct = params.get("product");
+
+const lat = parseFloat(params.get("lat"));
+const lon = parseFloat(params.get("lon"));
+const zoom = parseInt(params.get("zoom"));
 
 
 radarLayer = L.tileLayer.wms("https://opengeo.ncep.noaa.gov/geoserver/wms", {
