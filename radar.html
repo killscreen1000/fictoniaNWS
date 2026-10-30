@@ -693,7 +693,11 @@ console.log("Updating URL...");
     url.searchParams.set("lon", center.lng.toFixed(4));
     url.searchParams.set("zoom", zoom);
 
-    history.replaceState({}, "", url);
+    history.replaceState(
+        null,
+        "",
+        "?" + params.toString()
+    );
 
 }
 
