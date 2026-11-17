@@ -188,11 +188,58 @@ let isPlaying = false;
 let playInterval = null;
 let playbackSpeed = 500; // ms between frames
 
+let currentRadar = "gsp";
+let currentProduct = "sr_bref";
+
+const params = new URLSearchParams(window.location.search);
+
+const radarParam = params.get("radar");
+const productParam = params.get("product");
+const latParam = params.get("lat");
+const lonParam = params.get("lon");
+const zoomParam = params.get("zoom");
+
+const maplat = 36
+const maplng = -88
+const mapzoom = 6
+
+if (radarParam) {
+        currentRadar = radarParam
+} else {
+        console.log("No radar loaded");
+    }
+    
+
+if (productParam) {
+        currentProduct = productParam
+} else {
+        console.log("No product loaded");
+    }
+    
+if (latParam) {
+        maplat = latParam
+} else {
+        console.log("No latitude loaded");
+    }
+    
+if (lonParam) {
+        maplng = lonParam
+} else {
+        console.log("No longitude loaded");
+    }
+    
+if (zoomParam) {
+        mapzoom = zoomParam
+} else {
+        console.log("No zoom level loaded");
+    }
+
 map = L.map("map", {
-    center: [36, -88],
-    zoom: 6,
+    center: [maplat, maplng],
+    zoom: mapzoom,
     zoomSnap: 0.1
 });
+
 
   // Create base map (dark style)
 
@@ -228,20 +275,6 @@ map.addLayer(drawnItems3);
 var drawnItems4 = new L.FeatureGroup({pane: 'fillPane'});
 map.addLayer(drawnItems4);
 
-
-let currentRadar = "gsp";
-let currentProduct = "sr_bref";
-
-const params = new URLSearchParams(window.location.search);
-
-const radarParam = params.get("radar");
-const productParam = params.get("product");
-
-if (radarParam) {
-        currentRadar = radarParam
-} else {
-        console.log("No radar loaded");
-    }
 
 
 
@@ -697,9 +730,15 @@ function updateURL() {
 console.log("Updating URL...");
 
     const url = new URL(window.location);
+    
+    const center = map.getCenter();
+    const zoom = map.getZoom();
 
     url.searchParams.set("radar", currentRadar);
     url.searchParams.set("product", currentProduct);
+    url.searchParams.set("lat", center.lat.toFixed(4));
+    url.searchParams.set("lon", center.lng.toFixed(4));
+    url.searchParams.set("zoom", zoom);
 
     history.replaceState({}, "", url);
 
