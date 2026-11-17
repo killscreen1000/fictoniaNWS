@@ -237,6 +237,14 @@ const params = new URLSearchParams(window.location.search);
 const radarParam = params.get("radar");
 const productParam = params.get("product");
 
+if (radarParam) {
+        currentRadar = radarParam
+} else {
+        console.log("No radar loaded");
+    }
+
+
+
 
 radarLayer = L.tileLayer.wms("https://opengeo.ncep.noaa.gov/geoserver/wms", {
     pane: 'radarPane',
