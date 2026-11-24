@@ -1889,6 +1889,8 @@ if (county.division === "county") {
       return `‎ ‎ ${direction} ${county.name} County in ${county.region} ${states[county.state]}... <br>`;
     } else if (type === "TOR") {
       return `‎ ‎ ${direction} ${county.name} County in ${county.region} ${states[county.state]}... <br>`;
+    } else if (type === "SQW") {
+      return `‎ ‎ ${direction} ${county.name} County in ${county.region} ${states[county.state]}... <br>`;
     } else if (type === "FFW") {
       return `‎ ‎ ${direction} ${county.name} County in ${county.region} ${states[county.state]}... <br>`;
     } else if (type === "SPS") {
@@ -1901,6 +1903,8 @@ if (county.division === "county") {
       return `‎ ‎ ${direction} ${county.name} District in ${county.region} ${states[county.state]}... <br>`;
     } else if (type === "TOR") {
       return `‎ ‎ ${direction} ${county.name} District in ${county.region} ${states[county.state]}... <br>`;
+    } else if (type === "SQW") {
+      return `‎ ‎ ${direction} ${county.name} District in ${county.region} ${states[county.state]}... <br>`;
     } else if (type === "FFW") {
       return `‎ ‎ ${direction} ${county.name} District in ${county.region} ${states[county.state]}... <br>`;
     } else if (type === "SPS") {
@@ -1912,6 +1916,8 @@ if (county.division === "county") {
   if (type === "SVR") {
       return `‎ ‎ The ${direction} ${county.name} in ${county.region} ${states[county.state]}... <br>`;
     } else if (type === "TOR") {
+      return `‎ ‎ The ${direction} ${county.name} in ${county.region} ${states[county.state]}... <br>`;
+    } else if (type === "SQW") {
       return `‎ ‎ The ${direction} ${county.name} in ${county.region} ${states[county.state]}... <br>`;
     } else if (type === "FFW") {
       return `‎ ‎ The ${direction} ${county.name} in ${county.region} ${states[county.state]}... <br>`;
@@ -1946,6 +1952,8 @@ const spstxt = document.getElementById("SPStxtmsg").value
   lines += "BULLETIN - IMMEDIATE BROADCAST REQUESTED";
   } else if (type === "SMW") {
   lines += "BULLETIN - IMMEDIATE BROADCAST REQUESTED";
+  } else if (type === "SQW") {
+  lines += "BULLETIN - IMMEDIATE BROADCAST REQUESTED";
   } else if (type === "CFW") {
   lines += "URGENT - IMMEDIATE BROADCAST REQUESTED";
   } else if (type === "CFA") {
@@ -1975,6 +1983,9 @@ const spstxt = document.getElementById("SPStxtmsg").value
   lines += countyText;
   } else if (type === "TOR") {
   lines += "<br> The National Weather Service in " + officeName + " has issued a <br> <br>" + "* Tornado Warning for... <br>";
+  lines += countyText;
+  } else if (type === "SQW") {
+  lines += "<br> The National Weather Service in " + officeName + " has issued a <br> <br>" + "* Snow Squall Warning for... <br>";
   lines += countyText;
   } else if (type === "SMW") {
   lines += "<br> The National Weather Service in " + officeName + " has issued a <br> <br>" + "* Special Marine Warning... <br>";
@@ -2842,6 +2853,33 @@ if (tor) {
   if (document.getElementById("ffwEmergency").checked) {
   lines += "FLASH FLOOD DAMAGE THREAT...CATASTROPHIC <br>"
   }
+  lines += "<br> $$ <br> <br>"
+  lines += signature;
+  }
+  if (type === "SQW") {
+     if (type === "SQW") {
+  lines += "<br> * Until " + expire + ". <br> <br> * At " + currentTime() + ", a dangerous snow squall was identified by radar.";
+  lines += "<br> <br>‎ ‎ HAZARD...Intense bursts of heavy snow. Gusty winds leading to blowing snow and rapidly falling visibility. Wind gusts up to 30 mph." + "<br> <br>";
+  lines += "‎ ‎ SOURCE...Radar indicated." + "<br> <br>";
+  lines += "‎ ‎ IMPACT...Travel will become difficult and potentially dangerous within minutes." + "<br> <br>";
+  }
+  
+  if (roadText.length > 0) {
+  lines += "This includes the following highways... <br>" + roadText + "<br>";
+  } else {
+  lines += "";
+  }
+  
+  if (cityText.length > 0) {
+  lines += "* Locations impacted include...  <br>" + cityText + "<br>";
+  } else {
+  lines += "";
+  }
+
+  lines += "PRECAUTIONARY/PREPAREDNESS ACTIONS... <br> <br>";
+  lines += "Reduce speed and turn on headlights! During snow squalls, the visibility may suddenly drop to near zero in whiteout conditions. <br> <br> Consider avoiding or delaying travel until the snow squall passes your location. If you must travel, use extra caution and allow extra time. Rapid changes in visibility and slick road conditions may lead to accidents.";
+  lines += "<br> <br> && <br> <br>";
+  lines += "SNOW SQUALL...RADAR INDICATED <br>";
   lines += "<br> $$ <br> <br>"
   lines += signature;
   }
